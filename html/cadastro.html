@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cherry+Swash:wght@700&display=swap" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <main id="Cadastro">
+        <section id="titulo">
+            <h1>Alteração de cadastro</h1>
+        </section>
+        <section id="principal">
+            <form>
+                <fieldset class="cad">
+                    <div id="n">
+                        <div>
+                            <label>Nome: </label>
+                            <input type="text" name="nome" id="nome">
+                        </div>
+                        <div>
+                            <label>CPF: </label>
+                            <input type="text" name="cpf" id="cpf">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label>Email: </label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </fieldset>
+            </form>
+            <div><h2>Endereço</h2></div>
+            <form>
+                <fieldset class="cad">
+                    <div>
+                        <label>Logradouro: </label>
+                        <input type="text" name="logradouro" id="logradouro">
+                    </div>
+
+                    <div id="m">
+                        <div>
+                            <label>Número: </label>
+                            <input type="number" name="numero" id="numero">
+                        </div>
+
+                        <div>
+                            <label>Bairro: </label>
+                            <input type="text" name="bairro" id="bairro">
+                        </div>
+                        <div>
+                            <label>Cidade: </label>
+                            <input type="text" name="cidade" id="cidade">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Complemento: </label>
+                        <input type="text" name="complemento" id="complemento">
+                    </div>
+                </fieldset>
+            </form>
+            <div><h2>Dados do Cartão</h2></div>
+            <form>
+                <fieldset class="cad">
+                    <div>
+                        <label>Número do Cartão: </label>
+                        <input type="text" name="numero_cartao" id="numero_cartao">
+                    </div>
+
+                    <div id="valid">
+                        <div>
+                            <label>Validade: </label>
+                            <input type="text" name="validade" id="validade">
+                        </div>
+                        
+                        <div>
+                            <label>Titular do cartão: </label>
+                            <input type="text" name="titular" id="titular">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label>Security Code: </label>
+                        <input type="number" name="code" id="code">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+        <section id="final1">
+            <div><button id="botao" onclick="change()">Salvar</button></div>
+        </section>
+        <section id="final2">
+            <a href=".">Excluir minha conta</a>
+        </section>
+        
+    </main>
+    <script src="../js/headerFooter.js"></script>
+    <script src="../js/cadastro.js"></script>
+</body>
+</html>

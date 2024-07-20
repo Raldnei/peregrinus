@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <title>Peregrinus Store</title>
+</head>
+<body class="m-0 font-sans bg-gray-50">
+
+    <!-- Anúncio -->
+    <div id="anuncio" class="relative w-full h-72 overflow-hidden bg-white">
+        <div class="anuncio_topo-container flex w-full h-full transition-transform duration-300 ease-in-out">
+            <div class="anuncio_topo-item flex justify-center items-center flex-shrink-0 w-full h-full">
+                <img src="../imagens-hf/limited2.svg" alt="Imagem de oferta limitada" class="w-full h-full object-cover">
+            </div>
+            <div class="anuncio_topo-item flex justify-center items-center flex-shrink-0 w-full h-full">
+                <img src="../imagens-hf/Jogos2.png" alt="Imagem de jogos" class="w-full h-full object-cover">
+            </div>
+            <!-- Descomente estas linhas para adicionar mais imagens -->
+            <!-- <div class="anuncio_topo-item flex justify-center items-center flex-shrink-0 w-full h-full">
+                <img src="imagens-hf/jogos.jpg" alt="Imagem de jogos adicionais" class="w-full h-full object-cover">
+            </div>
+            <div class="anuncio_topo-item flex justify-center items-center flex-shrink-0 w-full h-full">
+                <img src="imagens-hf/bg11.jpg" alt="Imagem de fundo" class="w-full h-full object-cover">
+            </div>
+            <div class="anuncio_topo-item flex justify-center items-center flex-shrink-0 w-full h-full">
+                <img src="imagens-hf/logo_branca.png" alt="Logo branca" class="w-full h-full object-cover">
+            </div> -->
+        </div>
+        <div class="anuncio_topo-indicators absolute bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
+            <!-- Adicione indicadores aqui, se necessário -->
+        </div>
+    </div>
+
+    <!-- Produtos -->
+    <section class="compras-container grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 p-4 pt-72">
+        <div class="produto bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-center border-2 border-aqua transition duration-500 ease-in-out transform hover:bg-black hover:text-white hover:filter-none filter grayscale">
+            <img src="../imagens-hf/prod1.jpg" alt="Produto 1" class="compras-img mb-4 max-w-xs max-h-xs w-full h-auto object-cover rounded-t-lg">
+            <h2 class="text-xl font-semibold">R$ 49,99</h2>
+        </div>
+        <div class="produto bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-center border-2 border-aqua transition duration-500 ease-in-out transform hover:bg-black hover:text-white hover:filter-none filter grayscale">
+            <img src="../imagens-hf/prod2.jpg" alt="Produto 2" class="compras-img mb-4 max-w-xs max-h-xs w-full h-auto object-cover rounded-t-lg">
+            <h2 class="text-xl font-semibold">R$ 49,99</h2>
+        </div>
+        <div class="produto bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-center border-2 border-aqua transition duration-500 ease-in-out transform hover:bg-black hover:text-white hover:filter-none filter grayscale">
+            <img src="../imagens-hf/prod3.jpg" alt="Produto 3" class="compras-img mb-4 max-w-xs max-h-xs w-full h-auto object-cover rounded-t-lg">
+            <h2 class="text-xl font-semibold">R$ 49,99</h2>
+        </div>
+        <div class="produto bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-center border-2 border-aqua transition duration-500 ease-in-out transform hover:bg-black hover:text-white hover:filter-none filter grayscale">
+            <img src="../imagens-hf/venda3.jpg" alt="Produto 4" class="compras-img mb-4 max-w-xs max-h-xs w-full h-auto object-cover rounded-t-lg">
+            <h2 class="text-xl font-semibold">R$ 49,99</h2>
+        </div>
+        <div class="produto bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-center border-2 border-aqua transition duration-500 ease-in-out transform hover:bg-black hover:text-white hover:filter-none filter grayscale">
+            <img src="../imagens-hf/venda4.jpg" alt="Produto 5" class="compras-img mb-4 max-w-xs max-h-xs w-full h-auto object-cover rounded-t-lg">
+            <h2 class="text-xl font-semibold">R$ 49,99</h2>
+        </div>
+        <div class="produto bg-white p-4 shadow-lg rounded-lg flex flex-col items-center justify-center border-2 border-aqua transition duration-500 ease-in-out transform hover:bg-black hover:text-white hover:filter-none filter grayscale">
+            <img src="../imagens-hf/venda1.jpg" alt="Produto 6" class="compras-img mb-4 max-w-xs max-h-xs w-full h-auto object-cover rounded-t-lg">
+            <h2 class="text-xl font-semibold">R$ 49,99</h2>
+        </div>
+        <!-- Adicione mais produtos conforme necessário -->
+    </section>
+
+    <!-- Bloco 2 -->
+    <section id="container-bloco2" class="flex flex-col lg:flex-row mt-2 w-full h-96">
+        <div class="lado-esquerdo-bloco2 flex-2 flex items-center justify-center overflow-hidden p-2 bg-cover bg-center bg-no-repeat" style="background-image: url('imagens-hf/banguela.jpg');">
+            <!-- Conteúdo adicional do lado esquerdo -->
+        </div>
+        <div class="lado-direito-bloco2 flex-2 grid grid-cols-2 grid-rows-auto gap-2 p-0 h-full bg-cover bg-center bg-no-repeat" style="background-image: url('imagens-hf/Design sem nome (1).svg');">
+            <h1 class="col-span-2 text-center mb-2 text-2xl font-bold">Limited</h1>
+            <img src="../imagens-hf/venda3.jpg" alt="Produto 3" class="w-full h-auto object-cover max-w-xs max-h-xs">
+            <img src="../imagens-hf/venda4.jpg" alt="Produto 4" class="w-full h-auto object-cover max-w-xs max-h-xs">
+        </div>
+    </section>
+    <script src="headerFooter.js"></script>
+    <script src="anuncio_topo.js"></script>
+</body>
+</html>

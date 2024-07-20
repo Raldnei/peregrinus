@@ -1,0 +1,128 @@
+/* Estilo básico para o body */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #000000 ; /* Fundo escuro para o efeito mágico */
+    overflow: hidden; /* Impede o scroll causado pelo efeito */
+    position: relative; /* Necessário para posicionar o efeito mágico */
+    height: 100vh; /* Ocupa toda a altura da viewport */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 70%;
+}
+
+/* Estilo do canvas que cobre toda a tela */
+.canvas-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Fica atrás do conteúdo */
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+/* Estilo do contêiner da caixa de login */
+.login-container {
+    position: relative;
+    z-index: 1; /* Fica acima do canvas */
+    display: flex; 
+}
+
+/* Estilo da caixa de login */
+.login-box , .register-box{
+    background: #000000; /* Fundo branco para a caixa de login */
+    padding: 20px; 
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 1.3);
+    width: 400px;
+    max-width: 300px; /* Largura máxima para o formulário */
+    text-align: center;
+}
+.login-box{
+    box-shadow: 0 0px 12px rgba(255, 255, 255, 1.3);
+    border-radius: 10px 0px 0px 10px;
+}
+.register-box{
+    box-shadow: 12px 0px 12px rgba(#4CAF50, 1.3);
+    border-radius: 0px 10px 10px 0px;
+    background: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+btn-register{
+    border: none;
+    outline: none;
+}
+.login-box h2{
+    color: #ffffff;
+}
+
+/* Estilo dos campos de entrada e botão */
+.textbox {
+    margin-bottom: 15px;
+    margin: 20px;
+    background: none;
+    color: #4CAF50;
+}
+
+.textbox label {
+    display: block;
+    margin-bottom: 5px;
+    background: none;
+    color: #4CAF50;
+    
+}
+
+.textbox input {
+    width: 250px;
+    height: 25px;
+    border: none;
+    outline: none;
+    background: none;
+    color: #ffffff;
+    
+    border-bottom: 1px solid #ffffff;
+    padding: 0 10px; /* Padding horizontal */
+    box-sizing: border-box; /* Inclui padding e borda nas dimensões totais */
+
+    
+   
+    
+}
+
+
+.btn {
+    width: 200px;
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background: #4CAF50;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #45a049;
+}
+
+/* Texto de link para cadastro */
+.signup-text {
+    margin-top: 10px;
+}
+
+.signup-text a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+.signup-text a:hover {
+    text-decoration: underline;
+}
