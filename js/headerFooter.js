@@ -2,7 +2,7 @@ function loadHeader() {
 
     const headerHTML = `
     <header id="bloco1">
-        <div id="logo"><img src="./imagens-hf/logo_branca.png" alt="Logo"></div>
+        <div id="logo"><img src="../imagens-hf/logo_branca.png" alt="Logo"></div>
         
         <div id="buscar">
             <form action="buscar.py" method="get">
@@ -17,7 +17,7 @@ function loadHeader() {
         </div>
         <nav id="menu2">
         <i class="fas fa-shopping-cart carrinho-icon"></i>
-        <div id="perfil"><img src="./imagens-hf/user2.png" alt="Perfil"></div></div></nav>
+        <div id="perfil"><img src="../imagens-hf/user2.png" alt="Perfil"></div></div></nav>
     </header>
 
 
@@ -142,7 +142,7 @@ function loadFooter() {
     
         <div class="bloco-footer">
             <div class="logo">
-                <img src="./imagens-hf/logo_branca.png" alt="Logo">
+                <img src="../imagens-hf/logo_branca.png" alt="Logo">
             </div>
             <p class="copyright">&copy; Peregrinus 2024. Todos os direitos reservados.</p>
         </div>
