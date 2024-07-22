@@ -1,0 +1,106 @@
+/* Seletores */
+* {
+    /* Seleciona todos os elementos */
+}
+
+.classname {
+    /* Seleciona todos os elementos com a classe 'classname' */
+}
+
+#id {
+    /* Seleciona o elemento com o ID 'id' */
+}
+
+element {
+    /* Seleciona todos os elementos do tipo 'element' */
+}
+
+/* Cores e Fundo */
+background: #f0f0f0; /* Cor de fundo usando cor hexadecimal */
+background-color: #ffcc00; /* Cor de fundo usando cor hexadecimal */
+background-image: url('image.jpg'); /* Imagem de fundo */
+background-size: cover; /* Ajusta o tamanho da imagem de fundo */
+background-position: center; /* Centraliza a imagem de fundo */
+background-repeat: no-repeat; /* Impede a repetição da imagem de fundo */
+color: #0000ff; /* Cor do texto */
+border: 2px solid #ff0000; /* Cor e estilo da borda */
+
+/* Gradientes */
+background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradiente linear de fundo */
+
+/* Texto */
+font-family: Arial, sans-serif; /* Fonte do texto */
+font-size: 16px; /* Tamanho da fonte */
+font-weight: bold; /* Espessura da fonte */
+text-align: center; /* Alinhamento do texto */
+text-decoration: underline; /* Decoração do texto (sublinhado) */
+text-transform: uppercase; /* Transforma o texto em maiúsculas */
+
+/* Margens e Preenchimento */
+margin: 10px; /* Margem em todos os lados */
+margin-top: 10px; /* Margem no topo */
+margin-right: 10px; /* Margem à direita */
+margin-bottom: 10px; /* Margem na parte inferior */
+margin-left: 10px; /* Margem à esquerda */
+padding: 10px; /* Preenchimento em todos os lados */
+padding-top: 10px; /* Preenchimento no topo */
+padding-right: 10px; /* Preenchimento à direita */
+padding-bottom: 10px; /* Preenchimento na parte inferior */
+padding-left: 10px; /* Preenchimento à esquerda */
+
+/* Bordas */
+border-width: 2px; /* Largura da borda */
+border-style: solid; /* Estilo da borda (solid, dashed, dotted) */
+border-color: #00ff00; /* Cor da borda */
+
+/* Layout */
+width: 100%; /* Largura do elemento */
+height: 100px; /* Altura do elemento */
+max-width: 500px; /* Largura máxima do elemento */
+min-width: 200px; /* Largura mínima do elemento */
+max-height: 400px; /* Altura máxima do elemento */
+min-height: 100px; /* Altura mínima do elemento */
+display: block; /* Exibe o elemento como um bloco */
+display: inline; /* Exibe o elemento como um bloco em linha */
+display: flex; /* Usa o modelo Flexbox para layout */
+justify-content: center; /* Alinha os itens no centro horizontalmente */
+align-items: center; /* Alinha os itens no centro verticalmente */
+position: relative; /* Posiciona o elemento relativamente ao seu pai */
+position: absolute; /* Posiciona o elemento absolutamente em relação ao pai mais próximo */
+top: 10px; /* Distância do topo */
+right: 10px; /* Distância da direita */
+bottom: 10px; /* Distância da parte inferior */
+left: 10px; /* Distância da esquerda */
+z-index: 10; /* Ordem de empilhamento dos elementos */
+
+/* Opacidade e Filtros */
+opacity: 0.5; /* Define a opacidade do elemento */
+filter: blur(5px); /* Aplica um desfoque ao elemento */
+filter: grayscale(100%); /* Aplica um filtro em preto e branco */
+filter: sepia(100%); /* Aplica um filtro sépia */
+
+/* Bordas e Arredondamento */
+border-radius: 10px; /* Arredonda os cantos do elemento */
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adiciona sombra ao redor do elemento */
+
+/* Transições e Animações */
+transition: all 0.3s ease; /* Define a transição de todas as propriedades em 0.3 segundos */
+animation: slideIn 1s ease-in-out; /* Define uma animação chamada 'slideIn' */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+/* Consultas de Mídia (Media Queries) */
+@media (max-width: 768px) {
+    /* Estilos para dispositivos com largura máxima de 768px */
+}
+
+@media (min-width: 769px) {
+    /* Estilos para dispositivos com largura mínima de 769px */
+}

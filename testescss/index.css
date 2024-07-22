@@ -157,18 +157,49 @@ canvas {
 
 /* Texto de link para cadastro */
 .signup-text {
-  margin-top: 10%;
-    
+  margin-top: 0;
+  margin-bottom: 10%;  
 }
 
 .signup-text a {
     color: #ffffff;
     text-decoration: none;
-    
-    
+    font-size: 75%;
+   
 }
 
 .signup-text a:hover {
     text-decoration: none;
     color: #0004ff;
 }
+@media (max-width: 768px) {
+    .login-box{
+        border-radius: 15px;
+    }
+    .register-box{
+        display:none;
+    }
+    .mobile-register {
+        border: none;
+        text-decoration: none;
+        margin-top: 15%;
+        color: #0004ff;
+    }
+    .mobile-register:hover{
+        color: #f8f8fc;
+        
+    }
+}
+@media (min-width: 769px) {
+    /* Estilos para desktops */
+    .mobile-register{
+        display: none;
+    }
+  }
+@media (min-width: 1025px) {
+    /* Estilos para desktops */
+    .mobile-register{
+        display: none;
+    }
+  }
+  
