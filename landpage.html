@@ -66,7 +66,7 @@
         #Oferta-Semana{
             background-color: black;
             border: 2px solid black;
-            border-radius: 2%;
+            border-radius: 10px;
             padding: 1%;
 
         }
@@ -80,7 +80,26 @@
             color: aliceblue;
             background-color: aqua;
         }
-        
+        .img-custom {
+            width: 100%;
+            max-width: 150px; 
+            height: auto; 
+
+        }
+       .produtos-direita{
+        background-color: #011f38;
+        margin: 5px;
+        border-radius: 5px;
+       }
+       .produtos-direita:hover{
+        background-color: #0004ff;
+        color: aliceblue;  
+       }
+       .img-responsive {
+        width: 100%; 
+        max-width: 100%; 
+        height: auto; 
+       }
         
     </style>
 </head>
@@ -135,7 +154,7 @@
   <title>Oferta da Semana</title>
 </head>
 <body>
-    <section id="Oferta-Semana" class="container my-4 bg-dark">
+    <section id="Oferta-Semana" class="container my-4 ">
         <div class="row g-0"> <!-- Remove o espaçamento entre as colunas -->
             <!-- Imagem Principal -->
             <div class="col-lg-6 d-flex">
@@ -145,35 +164,36 @@
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center text-white">
                 <div class="text-center w-100">
                     <header class="mb-3">
-                        <img src="./imagens-hf/limited-item1.svg" alt="">
+                        <img src="./imagens-hf/nome-limitado2.svg" alt="">
                     </header>
                     <p class="mb-3">04:08:59</p>
-                    <div class="row row-cols-2 g-3">
-                        <div class="col d-flex justify-content-center">
-                            <div class="text-center">
-                                <img src="./imagens-hf/prod1.jpg" class="img-fluid w-75" alt="Item 1">
+                    <div class="row row-cols-2 g-0 produtos-limitados">
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <div class="text-center produtos-direita">
+                                <img src="./imagens-hf/prod1.jpg" class="img-custom" alt="Item 1">
                                 <h3 class="mt-2">R$ 99,90</h3>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center">
-                            <div class="text-center">
-                                <img src="./imagens-hf/prod2.jpg" class="img-fluid w-75" alt="Item 2">
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <div class="text-center produtos-direita">
+                                <img src="./imagens-hf/prod2.jpg" class="img-custom" alt="Item 2">
                                 <h3 class="mt-2">R$ 89,90</h3>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center">
-                            <div class="text-center">
-                                <img src="./imagens-hf/prod3.jpg" class="img-fluid w-75" alt="Item 3">
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <div class="text-center produtos-direita">
+                                <img src="./imagens-hf/prod3.jpg" class="img-custom" alt="Item 3">
                                 <h3 class="mt-2">R$ 79,90</h3>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center">
-                            <div class="text-center">
-                                <img src="./imagens-hf/prod3.jpg" class="img-fluid w-75" alt="Item 4">
+                        <div class="col d-flex justify-content-center align-items-center">
+                            <div class="text-center produtos-direita">
+                                <img src="./imagens-hf/prod3.jpg" class="img-custom" alt="Item 4">
                                 <h3 class="mt-2">R$ 79,90</h3>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
