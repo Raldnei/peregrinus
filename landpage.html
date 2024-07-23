@@ -13,18 +13,6 @@
     <style>
         *,*::after,*::before{box-sizing: border-box;}
         
-        html, body {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            width: 100%;
-        }
-
-        body {
-            position: relative;
-            min-height: 100vh; 
-            overflow-x: hidden; 
-        }
 
         body::before {
             content: '';
@@ -40,19 +28,10 @@
             filter: blur(15px); 
             z-index: -1;
         }
-        .carousel-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            max-height: 550px;
-        }
+       
 
-        .carousel-inner {
-            min-height: 200px;
-           
-        }
-
-        @media (max-width: 768px) {
+        
+          @media (max-width: 768px) {
             .carousel-inner {
                 min-height: 100px;
             }
@@ -62,12 +41,13 @@
             .carousel-inner {
                 min-height: 100px; 
             }
-        }
+        } 
         #Oferta-Semana{
             background-color: black;
             border: 2px solid black;
             border-radius: 10px;
             padding: 1%;
+           
 
         }
         .limited-text{
@@ -80,10 +60,15 @@
             color: aliceblue;
             background-color: aqua;
         }
-        .img-custom {
+        .produtos-limitado>img{
+            width: 90%;
+            
+        }
+        #Oferta-Semana-imgPrincipal{
             width: 100%;
-            max-width: 150px; 
-            height: auto; 
+        }
+        .img-custom {
+            width: 60%;
 
         }
        .produtos-direita{
@@ -92,15 +77,30 @@
         border-radius: 5px;
        }
        .produtos-direita:hover{
-        background-color: #0004ff;
+        
         color: aliceblue;  
+       
        }
        .img-responsive {
         width: 100%; 
-        max-width: 100%; 
+ 
+       
         height: auto; 
        }
+       .selecao-produto:hover , .produtos-direita:hover{
+        background-color: #0004ff;
+        color: antiquewhite;
+
+       }
+       .bloco-produtos{
+        width: 30vh;
         
+       }
+       .bloco-produtos img{
+        width: 70%;
+        border-radius: 5px 0 5px 0;
+       }
+     
     </style>
 </head>
 <body>
@@ -151,53 +151,91 @@
     </button>
   </div><!--Fim carrossel pré pronto-->
 
-  <title>Oferta da Semana</title>
+  
 </head>
 <body>
-    <section id="Oferta-Semana" class="container my-4 ">
-        <div class="row g-0"> <!-- Remove o espaçamento entre as colunas -->
-            <!-- Imagem Principal -->
-            <div class="col-lg-6 d-flex">
-                <img id="Oferta-Semana-imgPrincipal" src="./imagens-hf/banguela.jpg" class="img-fluid w-100" alt="IMAGEM BONITA">
+
+    <section id="Oferta-Semana" class="container-fluid d-flex text-center my-4" >
+        <figure class="" ><img class="col-lg-6 d-flex" id="Oferta-Semana-imgPrincipal" src="./imagens-hf/banguela.jpg" class="img-fluid w-100" alt="IMAGEM BONITA"></figure>
+    <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center text-white">
+            <header class="mb-3">
+                <figure class="bloco-produtos"> <img src="./imagens-hf/nome-limitado2.svg" alt=""></figure>
+            </header>
+            <div class="row row-cols-2 g-0 container-fluid produtos-limitados ">
+
+                <article class="col d-flex flex-column justify-content-center align-items-center  ">
+                    <figure class="bloco-produtos"><img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" alt=""></figure>
+                    <p>R$ 55,00</p>
+                </article>
+
+                <article class="col d-flex flex-column justify-content-center align-items-center ">
+                    <figure class="bloco-produtos"><img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" alt=""></figure>
+                    <p>R$ 55,00</p>
+                </article>
+
+                <article class="col d-flex flex-column justify-content-center align-items-center">
+                    <figure class="bloco-produtos"><img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" alt=""></figure>
+                    <p>R$ 55,00</p>
+                </article>
+
+
+                <article class="col d-flex flex-column justify-content-center align-items-center">
+                    <figure class="bloco-produtos"><img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" alt=""></figure>
+                    <p>R$ 55,00</p>
+                </article>
+
+
             </div>
-            <!-- Itens Limitados -->
+
+
+    </div>
+
+</section>
+
+    <!-- <section id="Oferta-Semana" class="container my-4 ">
+        <div class="row g-0"> 
+            
+           
+                <img class="col-lg-6 d-flex" id="Oferta-Semana-imgPrincipal" src="./imagens-hf/banguela.jpg" class="img-fluid w-100" alt="IMAGEM BONITA">
+           
+       
             <div class="col-lg-6 d-flex flex-column justify-content-center align-items-center text-white">
                 <div class="text-center w-100">
                     <header class="mb-3">
                         <img src="./imagens-hf/nome-limitado2.svg" alt="">
                     </header>
                     <p class="mb-3">04:08:59</p>
-                    <div class="row row-cols-2 g-0 produtos-limitados">
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <div class="text-center produtos-direita">
-                                <img src="./imagens-hf/prod1.jpg" class="img-custom" alt="Item 1">
-                                <h3 class="mt-2">R$ 99,90</h3>
+                    <div class="row row-cols-2 g-0 produtos-limitados ">
+                        <div class="col d-flex justify-content-center align-items-center bloco-produtos">
+                            <div class="text-center produtos-direita ">
+                            <article class="selecao-produto">
+                                <img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" class="img-custom" alt="Item 1">
+                                <p class="mt-2">R$ 99,90</p></article>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <div class="text-center produtos-direita">
-                                <img src="./imagens-hf/prod2.jpg" class="img-custom" alt="Item 2">
+                        <div class="col d-flex justify-content-center align-items-center bloco-produtos">
+                            <div class="text-center produtos-direita ">
+                                <img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" class="img-custom" alt="Item 2">
                                 <h3 class="mt-2">R$ 89,90</h3>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <div class="text-center produtos-direita">
-                                <img src="./imagens-hf/prod3.jpg" class="img-custom" alt="Item 3">
+                        <div class="col d-flex justify-content-center align-items-center bloco-produtos">
+                            <div class="text-center produtos-direita ">
+                                <img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" class="img-custom" alt="Item 3">
                                 <h3 class="mt-2">R$ 79,90</h3>
                             </div>
                         </div>
-                        <div class="col d-flex justify-content-center align-items-center">
-                            <div class="text-center produtos-direita">
-                                <img src="./imagens-hf/prod3.jpg" class="img-custom" alt="Item 4">
+                        <div class="col d-flex justify-content-center align-items-center bloco-produtos">
+                            <div class="text-center produtos-direita ">
+                                <img src="./imagens-hf/produtos_Images/produtos_ImgID1.png" class="img-custom" alt="Item 4">
                                 <h3 class="mt-2">R$ 79,90</h3>
                             </div>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     
 
    <section id="Categorias">
