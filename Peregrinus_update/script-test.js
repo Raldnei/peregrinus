@@ -103,7 +103,7 @@ function loadHeader() {
             <!-- Logo -->
             <div id="logo">
                 <a href="#">
-                    <img src="./imagens-hf/logo_azul_final.svg" alt="Logo" height="40">
+                    <img src="../imagens-hf/logo_azul_final.svg" alt="Logo" height="40">
                 </a>
             </div>
 
@@ -212,7 +212,7 @@ function loadFooter() {
         <div class="footer-content container d-flex">
             <!-- Lado Esquerdo: Logo e Copyright -->
             <div class="logo"><!-- O logo é o nome da classe -->
-                <img src="./imagens-hf/logo_azul_final.svg" alt="Logo">
+                <img src="../imagens-hf/logo_azul_final.svg" alt="Logo">
                 <p class="copyright">&copy; Peregrinus 2024. Todos os direitos reservados.</p>
             </div>
 
