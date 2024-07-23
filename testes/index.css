@@ -1,0 +1,30 @@
+*,*::after,*::before{box-sizing: border-box;}
+
+#header{
+
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgb(235, 164, 72);
+    width: 100%;
+
+  
+}
+
+
+
+
+  
+
+#logo{
+    background-image: url(../imagens-hf/logo_branca.png);
+    background-size: 200px;
+    background-repeat: no-repeat;
+    width: 15%; 
+}
+
+h1#logo a{
+    text-decoration: none;
+    display: block;
+  
+    text-indent: -999999em;
+}

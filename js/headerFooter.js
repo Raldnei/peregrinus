@@ -8,8 +8,8 @@ function loadHeader() {
             <form action="buscar.py" method="get">
                 <div class="search-container">
                     <input id="pesquisa" type="text" placeholder="Buscar">
-                    <button type="submit" id="botao-buscar">
-                        <i class="fas fa-search"></i> <!-- Ícone de lupa -->
+                    <button  class="fas fa-search" type="submit" id="botao-buscar">
+                     
                     </button>
                 </div>
             </form>
@@ -126,6 +126,7 @@ function loadHeader() {
         #botao-buscar {
          right: 8px;
         }
+         
      }
     </style>
 
