@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.principal{
+    background-color: blueviolet; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;   
+}
+.t1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    color: rgb(251, 251, 252);
+}
+
+.cad{
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div#n{
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    padding-bottom: 1.2rem;
+}
+div#m{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+div#valid{
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+.t2{
+   display: flex;
+   flex-direction: row; 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.6em;
+   padding-left: 20rem;
+   color: rgb(235, 128, 245);
+   border-color: rgba(211, 226, 222, 0.795);
+}
+
+section#final1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.6rem;
+}
+section#final2{
+    display: flex;
+    flex-direction: row;
+    padding-left: 68em;
+}
+button#botao{
+    background-color: rgb(68, 0, 255);
+    border-radius: 0.65rem;
+    width: 12rem;
+    height: 2rem;
+}
+button#botao:hover{
+    background-color: rgb(43, 226, 141);
+}
+
+label{
+    font-family:'Montserrat', sans-serif;
+    color: white;
+}
+
+input#nome, input#cpf{
+    width: 12em;
+    height: 2em;
+    border-radius: 0.8em;
+}
+input#email{
+    width: 20em;
+    height: 2em;
+    border-radius: 0.8em;
+}
+input#logradouro, input#numero_cartao{
+    width: 30rem;
+    height: 2rem;
+    border-radius: 0.8em;
+}
+input#numero, input#cidade, input#validade{
+    width: 8rem;
+    height: 2rem;
+    border-radius: 0.8em;
+}
+input#bairro{
+    width: 11rem;
+    height: 2rem;
+    border-radius: 0.8em;
+}
+input#complemento, input#titular{
+    width: 15rem;
+    height: 2rem;
+    border-radius: 0.8em;
+}
+input#code{
+    width: 6rem;
+    height: 2rem;
+    border-radius: 0.8em;
+}
+
+
+

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body{
+    background-color: #943126; 
+    
+}
+
+
+h1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2em;
+    color: white;
+}
+
+.cad{
+    border: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+div#n{
+    display: flex;
+    flex-direction: row;
+    gap: 10em;
+    padding-bottom: 1.2rem;
+}
+div#m{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+div#valid{
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+}
+h2{
+   display: flex;
+   flex-direction: row; 
+   font-family: 'Montserrat', sans-serif;
+   font-size: 1.2em;
+   padding-left: 20rem;
+   color: blueviolet;
+   border-color: black;
+}
+
+section#final1{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.6rem;
+}
+section#final2{
+    display: flex;
+    flex-direction: row;
+    padding-left: 68em;
+}
+button{
+    background-color: orange;
+    border-radius: 0.65rem;
+    width: 12rem;
+    height: 2rem;
+}
+button:hover{
+    background-color: blueviolet;
+}
+
+label{
+    font-family:'Montserrat', sans-serif;
+    color: white;
+}
+
+input#nome, input#cpf{
+    width: 12em;
+    height: 1.8em;
+}
+input#email{
+    width: 20em;
+    height: 2em;
+}
+input#logradouro, input#numero_cartao{
+    width: 30rem;
+    height: 2rem;
+}
+input#numero, input#cidade, input#validade{
+    width: 8rem;
+    height: 1.5rem;
+}
+input#bairro{
+    width: 11rem;
+    height: 1.5rem;
+}
+input#complemento, input#titular{
+    width: 15rem;
+    height: 1.5rem;
+}
+input#code{
+    width: 6rem;
+    height: 1.4rem;
+}
