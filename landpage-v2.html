@@ -14,7 +14,7 @@
         *,*::after,*::before{box-sizing: border-box;}
         
 
-        body::before {
+        body::before { /* Padrão Body */
             content: '';
             position: fixed;
             top: 0;
@@ -31,18 +31,18 @@
        
 
         
-          @media (max-width: 768px) {
+          @media (max-width: 768px) { /* carrossel img */
             .carousel-inner {
                 min-height: 100px;
             }
         }
 
-        @media (max-width: 576px) {
+        @media (max-width: 576px) { /* carrossel img */
             .carousel-inner {
                 min-height: 100px; 
             }
         } 
-        #Oferta-Semana{
+        #Oferta-Semana{ /* sessão limitada Ínicio */
             background-color: black;
             border: 2px solid black;
             border-radius: 10px;
@@ -66,8 +66,6 @@
         .img-custom {
             width: 100%;
            
-           
-
         }
        .produtos-direita{
         background-color: #011f38;
@@ -81,16 +79,12 @@
        }
        .img-responsive {
         width: 70%; 
- 
-       
         height: auto; 
        }
        #selecao-produto:hover , .produtos-direita:hover{
         background-color: #0004ff;
         color: antiquewhite;
-
        }
-      
        .bloco-produtos img{
         width: 100%;
         border-radius: 5px 10px 5px 0;
@@ -99,16 +93,47 @@
         background-color: #0004ff;
         border-radius: 0 0 5px 5px;
         width: 60%;
-        
        }
        .figure-container:hover {
         background-color: #ffffff ;
         color: #0004ff;
         cursor: pointer;
-        
-        
+       }  /* << ---  sessão limitada Final */
+
+
+       .destaques-box img{ /* Ínicio da sessão destaques */
+        margin: 0;
        }
+       .destaques-box h1{
+        color: #011f38;
+
+        margin-top: 2vh;
+       }
+       .box-figura-destaque{
+        color: #011f38;
+        background-color: #00AFEF;
+        max-width: 25vh;
+        border-radius: 5px;
+        margin: 4vh;
+
+       }
+       .box-figura-destaque img{
+        width: 100%;
+        background-color: #00AFEF;
+        
+
+       }
+       #Categorias{
+        background-color: #00afef70;
+       } /* Fim da sessão destaques */
+      .navegacao-de-categorias {
      
+      }
+      .box-figura-destaque:hover{
+        background-color: #ffffff;
+        color: #0004ff;
+        cursor: pointer;
+      }
     </style>
 </head>
 <body>
@@ -160,10 +185,7 @@
   </div><!--Fim carrossel pré pronto-->
 
 
-  <title>Oferta da Semana</title>
-</head>
-<body>
-    <section id="Oferta-Semana" class="container my-4 bg-dark">
+    <section id="Oferta-Semana" class="container my-4 bg-dark"> <!-- Bloco edição limitada ínicio -->
         <div class="row g-0">
             <!-- Imagem Principal -->
             <div class="col-lg-6 d-flex">
@@ -196,21 +218,25 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> <!-- Bloco edição limitada ínicio -->
     
     
+   <section id="Categorias" class="d-flex justify-content-center align-items-center text-center w-100 "> <!-- bloco dos destaques inicio -->
 
-   <section id="Categorias">
-
-        <nav id="navegacao de categorias">
-            <div>cat 1</div>
-            <div>cat 2</div>
-            <div>cat 3</div>
+        <nav id="navegacao-de-categorias" class="row row-cols-3 justify-content-center  text-white">
+            <article  class="d-flex flex-column text-center align-items-center destaques-box "><h1>Destaques</h1><figure class="d-flex flex-column text-center justify-content-center align-items-center box-figura-destaque"><img src="./imagens-hf/produto-teste_Images/produto-teste_ImgID1.png" alt="">
+                <p>R$ 69,90</p></figure></article>
+            <article class="col d-flex flex-column text-center align-items-center destaques-box"><h1>Destaques</h1><figure class="d-flex flex-column  align-items-center text-center box-figura-destaque"><img src="./imagens-hf/produto-teste_Images/produto-teste_ImgID1.png" alt="">
+                <p>R$ 99,90</p></figure></article>
+        
+            <article class="col d-flex flex-column text-center align-items-center destaques-box"><h1>Destaques</h1><figure class="d-flex flex-column text-center justify-content-center align-items-center box-figura-destaque"><img src="./imagens-hf/produto-teste_Images/produto-teste_ImgID1.png" alt="">
+                <p>R$ 89,90</p></figure></article>
         </nav>
-    
-   </section>
+   </section> <!-- bloco dos destaques final -->
 
-   <img  id="img-menor"  src="" alt="IMAGEM MENOR">
+   
+   
+   <img  id="img-menor"  src="" alt="IMAGEM MENOR"> <!-- Acho que não vai usar -->
 
    <section id="Sobre-nos">
     
