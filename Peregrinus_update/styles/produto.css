@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --cor-roxo: #6B1F99;
+    --texto-montserrat: "Montserrat", sans-serif;
+    --branco: #ffffff;
+    --preto: #000000;
+}
+
+body{
+    font-family: var(--texto-montserrat);
+}
+
+.container-product{
+    height: 65vh;
+    background-color: var(--cor-roxo);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.container-product .product-img{
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.container-product .product-img .show-product{
+    width: 55%;
+    height: 80%;
+    border-radius: 10px;
+}
+
+.container-product .product-img .show-product img{
+    width: 98%;
+    border-radius: 10px;
+}
+
+.container-product .buy-product{
+    width: 50%;
+    color: var(--branco);
+    padding: 100px;
+}
+
+.container-product .buy-product p{
+    font-size: 1.2em;
+}
+
+.info-product{
+    width: 100%;
+    height: 40vh;
+    padding: 20px;
+}
+
+.other-products{
+    width: 100%;
+    height: 65vh;
+    background-color: var(--cor-roxo);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.other-products .linha{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: calc(90% + 1%);
+}
+
+.other-products .linha .card-product{
+    width: 28%;
+    height: fit-content;
+    background-color: var(--preto);
+    display: flex;
+    flex-direction: column;
+}
+
+.other-products .linha .card-product .card-img img{
+    width:100%;
+}
