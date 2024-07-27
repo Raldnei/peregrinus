@@ -37,6 +37,9 @@ function loadHeader() {
             align-items: center;
             color: #00AFEF;
         }
+            .nav-link-loja:hover{
+            color: #ffffff;
+        }
         .navbar-nav .nav-link {
             color: #00AFEF;
         }
