@@ -14,6 +14,7 @@ body::before { /* Padrão Body */
     filter: blur(15px); 
     z-index: -1;
 }
+
 .organizar{
     width: 100%;
     height: 100vh;
@@ -24,38 +25,75 @@ body::before { /* Padrão Body */
     padding-right: 28vw;
 }
 .titulo{
-    font-size: clamp(30px, 2vh , 80px);
+    font-size: clamp(40px, 2vh , 90px);
     font-family: Montserrat, sans-serif;
     color: rgba(255, 255, 255, 0.938);
-    padding-left: 0.9em;
-    padding-bottom: 1.5em;
 }
 div#principal{
-    height: 35em;
-    width: 40em;
+    height: 38em;
+    width: 50em;
     background-color: #0b2475;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-color: #f3f5f4;
 }
-div#imag{
+div#rastreamento{
     display: flex;
-    width: 16em;
-    height: 16em;
-    padding-right: 35em;
+    flex-direction: row;
+    align-items: center;
 }
-div#p1{
+div#codigo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5em;
-    padding-top: 2em;
+}
+img#entrega{
+    width: 18em;
+    height: 18em;
+}
+div#texto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 3em;
+}
+h2#titulo2{
+    font-size: clamp(25px, 2vh , 40px);
+    font-family: Montserrat, sans-serif;
+    color: rgba(255, 255, 255, 0.938);
+    padding-left: 5em;
+}
+p#aleatorio{
+    font-size: clamp(18px, 2vh , 30px);
+    font-family: Montserrat, sans-serif;
+    color: rgba(255, 255, 255, 0.938);
+}
+div#lista{
+    display: flex;
+    align-items: center;
+    gap: none;
+}
+img#check{
+    width: 10em;
+    height: 10em;
+}
+ul#l{
+    font-family: Montserrat, sans-serif;
+    color: rgba(255, 255, 255, 0.938);
+    list-style-type: none;
+}
+li{
+    font-size: clamp(12px, 2vh , 45px);
+}
+div#lista1{
+    padding-right: 5em;
 }
 button#b1{
-    height: 3em;
-    width: 25em;
+    height: 5em;
+    width: 30em;
     background-color: rgb(0, 174, 255);
     border-radius: 0.75em;
     color: white;
