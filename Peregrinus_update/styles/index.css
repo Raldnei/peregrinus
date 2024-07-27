@@ -111,3 +111,27 @@ color: #0004ff;
 cursor: pointer;
 }
 /* Fim sessão destaques carrossel */
+
+#Sobre-nos-div-Auxiliar {
+    display: flex;
+    justify-content: space-between; /* Distribui espaço entre os itens */
+}
+
+#Sobre-nos-div-Auxiliar .col {
+    flex: 1; 
+    margin: 10px; 
+}
+#Sobre-nos-div-Auxiliar .col header {
+    margin: 0; 
+    padding: 10px; 
+}
+#Sobre-nos h2{
+    color: #ffffff;
+}
+#Sobre-nos-historia, #Sobre-nos-valores, #Sobre-nos-missao{
+    background-color: #011f38b4;
+    color: #ffffff;
+    border-radius: 5px;
+    font-size: larger;
+    
+}
