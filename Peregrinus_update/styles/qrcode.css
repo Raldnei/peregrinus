@@ -38,7 +38,7 @@ div#principal{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border-color: #32e994;
+    border-color: #f3f5f4;
 }
 div#imag{
     display: flex;
