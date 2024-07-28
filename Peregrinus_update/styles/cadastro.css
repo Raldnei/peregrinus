@@ -27,6 +27,10 @@ body::before { /* Padrão Body */
     border: 1px solid #dee2e6;
     border-radius: .25rem;
 }
-#botao {
-    margin-top: 1rem;
+#botao{
+
+    margin: 1rem;
 }
+#botao2{
+    margin-top: 1rem;
+} 
