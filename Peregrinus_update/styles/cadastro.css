@@ -34,3 +34,9 @@ body::before { /* Padrão Body */
 #botao2{
     margin-top: 1rem;
 } 
+.titulo-edit{
+    color: #FFFFFF ;
+}
+.titulo-grande{
+    color: #FFFFFF;
+}
