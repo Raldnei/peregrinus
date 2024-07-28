@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --texto-montserrat: "Montserrat", sans-serif;
+    --cor-azul: #011f38;
+}
+
+body{
+    background-color: var(--cor-azul);
+}
+
+.ct-table .table tbody tr td img.product{
+    max-width: 10vw;
+    height: auto;
+}
+
