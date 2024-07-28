@@ -1,10 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-.principal{
-    background-color: blueviolet; 
+body::before { /* Padrão Body */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 100%;
+    background-image: url(../images/background-dragons.svg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    filter: blur(15px); 
+    z-index: -1;
+}
+ 
+.principal{ 
     display: flex;
     flex-direction: column;
-    align-items: center;   
+    align-items: center;
+    width: 100%;
+    height: 80vh;   
 }
 .t1{
     display: flex;
@@ -49,21 +65,23 @@ div#valid{
    font-family: 'Montserrat', sans-serif;
    font-size: 1.6em;
    padding-left: 20rem;
-   color: rgb(235, 128, 245);
+   color: rgb(248, 248, 248);
    border-color: rgba(211, 226, 222, 0.795);
 }
 
 section#final1{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 1.6rem;
+    gap: 1.2em;
 }
 section#final2{
     display: flex;
     flex-direction: row;
-    padding-left: 68em;
+    padding-left: 41em;
+    padding-top: 2em;
 }
 button#botao{
     background-color: rgb(68, 0, 255);
@@ -116,5 +134,14 @@ input#code{
     border-radius: 0.8em;
 }
 
-
-
+@media (max-width: 700px) {
+    div#m{
+        flex-direction: column;
+    }
+    div#n{
+        flex-direction: column;
+    }
+    div#valid{
+        flex-direction: column;
+    }
+}
