@@ -1,0 +1,119 @@
+body::before { /* Padrão Body */
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/background-dragons.svg);
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    filter: blur(15px); 
+    z-index: -1;
+}
+img#boleto{
+    width: 10vw;
+    height: 10vh;
+}
+main#compras{
+    width: 100%;
+    height: 130vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div#principal{
+    width: 40em;
+    height: 55em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blue;
+}
+.produtos{
+    width: 10em;
+    height: 10em;
+}
+.produto{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 1.2em;
+    gap: 0.6em;
+}
+.botao{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+div#selecionar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.forma{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+div#descrição{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+div#descriçao1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+div#d2{
+    display: flex;
+    flex-direction: row;
+    align-items: space-between;
+    justify-content: space-between;
+    padding: 3em;
+}
+img#ent{
+    width: 6em;
+    height: 6em;
+}
+div#entrega{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+h2#preco-total{
+    font-size: 1.2em;
+    color: white;
+}
+h2#frete{
+    font-size: 1.2em;
+    color: white;
+}
+h2#Desconto{
+    font-size: 1.2em;
+    color: white;
+}
+div#finalizado{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+button#confirme{
+    background-color: rgb(68, 0, 255);
+    border-radius: 0.65rem;
+    width: 28rem;
+    height: 4rem;
+}
+button#confirme:hover{
+    background-color: rgb(11, 112, 112);
+} 

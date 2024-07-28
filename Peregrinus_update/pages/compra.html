@@ -9,54 +9,59 @@
 </head>
 <body>
     <main id="compras">
-        <div class="container-fluid">
+        <div id="principal">
             <h1 class="final">Finalizar Compra</h1>
-            <div class="produto">
-                <img src="" alt="">
-                <h2 class="tproduto"></h2>
-                <p id="preço"></p>
-                <div id="botao">
-                    <button id="negativo"><img src="" alt=""></button>
-                    <p id="contador"></p>
-                    <button id="positivo"><img src="" alt=""></button>
-                </div>
-            </div>
-            <div class="produto">
-                <img src="" alt="">
-                <h2 class="tproduto"></h2>
-                <p id="preço"></p>
-                <div id="botao">
-                    <button id="negativo"><img src="" alt=""></button>
-                    <p id="contador"></p>
-                    <button id="positivo"><img src="" alt=""></button>
-                </div>
-            </div>
-            <div id="selecionar">
-                <div classe="forma">
-                    <img src="" alt="">
-                    <div id='descrição'>
-                        <p>Pague em Boleto</p>
-                        <p>aprovação imediata</p>
+            <div class="container-fluid">
+                <div class="produto">
+                    <img src="../images/prod1.jpg" alt="produto2" class="produtos">
+                    <h2 class="tproduto">tabuleiro</h2>
+                    <p id="preço"></p>
+                    <div class="botao">
+                        <button type="button" class="btn btn-danger">-</button>
+                        <p id="contador"></p>
+                        <button type="button" class="btn btn-success">+</button>
                     </div>
                 </div>
-            </div>
-            <div id="descrição">
-                <div id="entrega">
-                    <div id="img">
-                        <img src="" alt="">
+                <div class="produto">
+                    <img src="../images/prod1.jpg" alt="produto2" class="produtos">
+                    <h2 class="tproduto">tabuleiro</h2>,
+                    <p id="preço"></p>
+                    <div class="botao">
+                        <button type="button" class="btn btn-danger">-</button>
+                        <p id="contador"></p>
+                        <button type="button" class="btn btn-success">+</button>
                     </div>
-                    <p>entrega premium</p>
-                    <p>receba amanhã - R$:9,90</p>
                 </div>
-                <div id="valores">
-                    <h2 id="preco-total">Total de Produtos: </h2>
-                    <h2 id="frete">Frete: </h2>
-                    <h2 id="Desconto">Desconto: R$0,00</h2>
+                <div id="selecionar">
+                    <div classe="forma">
+                        <h2>Selecione forma de pagamento</h2>
+                        <div id='descrição'>
+                            <img src="../images/boleto-logo.svg" alt="boleto" id="boleto">
+                            <div id="descrição1">
+                                <p>Pague em Boleto</p>
+                                <p>aprovação imediata</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div id="finalizado">
-                <p id='pagamento'>total a pagar: </p>
-                <button>confirmar pagamento</button>
+                <div id="d2">
+                    <div id="entrega">
+                        <img src="../images/entrega.svg" alt="entregadora" id="ent">
+                        <div id="img">
+                             <p>entrega premium</p>
+                             <p>receba amanhã - R$:9,90</p>
+                        </div>
+                    </div>
+                    <div id="valores">
+                        <h2 id="preco-total">Total de Produtos: </h2>
+                        <h2 id="frete">Frete: </h2>
+                        <h2 id="Desconto">Desconto: R$0,00</h2>
+                    </div>
+                </div>
+                <div id="finalizado">
+                    <p id='pagamento'>total a pagar: </p>
+                    <button id="confirme">confirmar pagamento</button>
+                </div>
             </div>
         </div>
     </main>
