@@ -7,7 +7,7 @@ body::before { /* Padrão Body */
     left: 0;
     min-width: 100%;
     height: 100%;
-    background-image: url(../images/background-dragons.svg);
+    background-color: blue;
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -20,7 +20,7 @@ body::before { /* Padrão Body */
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 80vh;   
+    height: 100vh;   
 }
 .t1{
     display: flex;
