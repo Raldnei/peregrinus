@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root{
+    --texto-montserrat: "Montserrat", sans-serif;
+    --cor-azul: #011f38;
+}
+
+body{
+    background-color: var(--cor-azul);
+}
+
+.container .container-sm .table-responsive table tbody tr td img{
+    width: 15vw;
+}
