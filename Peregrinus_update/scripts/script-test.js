@@ -94,7 +94,7 @@ function loadHeader() {
         <div class="container-fluid d-flex justify-content-between align-items-center">
             <!-- Logo -->
             <div id="logo">
-                <a href="#">
+                <a href="../pages/index.html">
                     <img src="../images/logo_azul_final.svg" alt="Logo" height="75">
                 </a><button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span><!-- Botão de colapso do menu (hamburger menu) -->
@@ -112,16 +112,16 @@ function loadHeader() {
                             <button class="btn btn-outline-primary" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
-                            <a class="nav-link nav-link-loja px-3" href="#">LOJA</a>
+                            <a class="nav-link nav-link-loja px-3" href="../pages/catalogo.html">LOJA</a>
                         </div>
                     </form>
 
                     <!-- Links de navegação -->
                     <div class="navbar-nav ms-auto d-none d-lg-flex">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../pages/compra.html">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="../pages/meus_pedidos.html">
                             <i class="fas fa-user"></i>
                         </a>
                     </div>
