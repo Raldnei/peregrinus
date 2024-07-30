@@ -9,28 +9,31 @@
     <title>Finalização de Compra</title>
 </head>
 <body>
-    <main id="compras">
+    <main id="compras"> 
         <div id="principal">
-            <h1 class="final">Finalizar Compra</h1>
-            <div class="container-fluid">
-                <div class="produto">
+            <header><h1 class="final">Finalizar Compra</h1></header>
+           
+            <div class="container-fluid" id="conteudo-divisao">
+                <div class="produto" id="produtoUm">
                     <img src="../images/prod1.jpg" alt="produto2" class="produtos">
                     <h2 class="tproduto">tabuleiro</h2>
                     <p class="preço">59.00</p>
-                    <div class="botao">
-                        <button type="button" class="btn btn-danger" onclick="contador1()">-</button>
-                        <p class="contador"></p>
-                        <button type="button" class="btn btn-success" onclick="contador2()">+</button>
+                    <div class="botao" id="idbotao">
+                        <button type="button"  class="btn btn-danger botao-menos" onclick="contador()">-</button>
+                        <p class="contador" id="contador">0</p>
+                        <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
+                       
                     </div>
                 </div>
-                <div class="produto">
+                <div class="produto" id="produtoDois">
                     <img src="../images/prod1.jpg" alt="produto2" class="produtos">
                     <h2 class="tproduto">tabuleiro</h2>,
                     <p class="preço">59.00</p>
                     <div class="botao">
-                        <button type="button" class="btn btn-danger" onclick="contador1()">-</button>
-                        <p class="contador"></p>
-                        <button type="button" class="btn btn-success" onclick="contador2()">+</button>
+                        <button type="button" class="btn btn-danger botao-menos" onclick="contador()">-</button>
+                        <p class="contador">0</p>
+                        <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
+                        
                     </div>
                 </div>
                 <div id="selecionar">
@@ -55,7 +58,7 @@
                     </div>
                     <div id="valores">
                         <h2 id="preco-total">Total de Produtos: </h2>
-                        <h2 id="frete">Frete: </h2>
+                        <h2 id="frete">Frete: R$:9,90 </h2>
                         <h2 id="Desconto">Desconto: </h2>
                     </div>
                 </div>
