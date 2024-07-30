@@ -76,9 +76,22 @@ color: #ffffff;
     white-space: nowrap;  /* evitar quebra de linha */
     text-overflow: ellipsis; /* colocar ... ao invés de quebrar linha */
 }
+.figure-container {
+    text-decoration: none;
+    color: #ffffff;
+    
+}
+
+.testes a{
+    color:#ffffff;
+    text-decoration: none;
+}
+.figure-container a:hover{
+    color: #0004ff;
+}
 .figure-container:hover {
-background-color: #ffffff ;
-color: #0004ff;
+background-color: #ffffff;
+
 cursor: pointer;
 }  /* << ---  sessão limitada Final */
 
@@ -100,7 +113,6 @@ border-radius: 0 0 5px 5px;
 .fundo-destaque{ /* background geral dos destaques */
 background-color: #2900dd6b;
 
-
 }
 .titulo-destaques { /* titulos dos destaques */
 color: #ffffff;
@@ -109,6 +121,9 @@ color: #ffffff;
 background-color: #ffffff;
 color: #0004ff;
 cursor: pointer;
+}
+.mudar-paginas{
+    text-decoration: none;
 }
 /* Fim sessão destaques carrossel */
 
