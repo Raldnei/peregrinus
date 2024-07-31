@@ -1,0 +1,38 @@
+*,*::after,*::before{box-sizing: border-box;}
+
+.divlinks a{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    background-color: rgb(4, 37, 128);
+    height: 8vh;
+    border-radius: 15px;
+    
+
+}
+#produtos{
+    height: 100vh;
+}
+#main-height{
+   
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.divlinks{
+    gap: 1vw;
+}
+
+.container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#produtos{
+    height: calc(80vh-75);
+}
