@@ -1,10 +1,12 @@
 
 
 function contador(){
-    let arraydiv = Array.from(document.getElementById('conteudo-divisao').children);
-    arraydiv =arraydiv.slice(0,arraydiv.length-3);
+    let arraydiv = Array.from(document.getElementById('produtos-compra').children);
     let precoTotal = 0
     let totalprodutos = 0
+
+
+
 
     for (let div of arraydiv) {
 
@@ -30,9 +32,16 @@ function contador(){
                 }
 
         }
-        precoTotal+=Number(document.getElementById(div.id).getElementsByTagName('p')[0].textContent)*Number(document.getElementById(div.id).getElementsByTagName('p')[1].textContent)
+
+   
+       
+ 
+
         totalprodutos +=Number(document.getElementById(div.id).getElementsByTagName('p')[1].textContent)
+        precoTotal+=Number(String(document.getElementById(div.id).getElementsByTagName('p')[0].textContent).split(' ')[1].replace(',','.'))*Number(document.getElementById(div.id).getElementsByTagName('p')[1].textContent)
     }
+
+    precoTotal+=9.90
 
     if(totalprodutos > 10){
         document.getElementById('Desconto').textContent='Desconto: R$ 20,00'
@@ -45,7 +54,7 @@ function contador(){
     }
 
     document.getElementById('preco-total').textContent = 'Total de Produtos: '+totalprodutos
-    document.getElementById('pagamento').textContent = 'total a pagar: R$' + precoTotal
+    document.getElementById('pagamento').textContent = 'total a pagar: R$' + String(precoTotal.toFixed(2)).replace('.',',')
 
 
 } 
