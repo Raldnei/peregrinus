@@ -14,63 +14,28 @@ body::before { /* Padrão Body */
     filter: blur(15px); 
     z-index: -1;
 }
-.organizar{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding-left: 25vw;
+
+#principal {
+    text-align: center;
+    background-color: blue;
+
 }
-.titulo{
-    font-size: 2em;
-    font-family: Montserrat, sans-serif;
-    color: rgba(255, 255, 255, 0.938);
+#imag img {
+    max-width: 40%;
+    height: auto;
 }
-div#principal{
-    height: 80vh;
-    width: 50vw;
-    background-color: #0b2475;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+#p1 {
+    margin-top: 20px;
 }
-div#imag{
-    display: flex;
-    width: 20vh;
-    height: 20vw;
-    padding-right: 40vw;
-}
-div#p1{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 2vw;
-    padding-top: 8vh;
-}
-button#b1{
-    height: 5vh;
-    width: 25vw;
-    background-color: rgb(0, 174, 255);
-    border-radius: 2vh;
-    color: white;
-    font-size: 1em;
+#p1 button {
+    margin: 10px;
 }
 
-button#b1:hover{
-    background-color:  #32e994;
-}
-button#b2{
-    height: 4vh;
-    width: 15vw;
-    background-color: rgb(153, 0, 255);
-    border-radius: 2vh;
-    color: white;
-    font-size: 0.8em;
-}
-button#b2:hover{
-    background-color:  #32e994;
-}
+@media (max-width: 576px) {
+    .titulo {
+        font-size: 1.5rem;
+    }
+    #p1 button {
+        width: 100%;
+        margin: 5px 0;
+    }
