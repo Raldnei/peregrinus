@@ -1,14 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@300;400;500;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root{
-    --texto-montserrat: "Montserrat", sans-serif;
-    --azul-escuro: #011f38;
+
+#texto{
+    color: black;
 }
 
-body{
-    font-family: var(--texto-montserrat);
-    background-color: var(--azul-escuro);
-}
 
 #ct-table{
     padding: 5%;
