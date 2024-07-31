@@ -15,10 +15,11 @@ body::before { /* Padrão Body */
     z-index: -1;
 }
 
-#principal {
-    text-align: center;
-    background-color: blue;
-
+.principal {
+    min-height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 #imag img {
     max-width: 40%;
@@ -39,3 +40,4 @@ body::before { /* Padrão Body */
         width: 100%;
         margin: 5px 0;
     }
+}
