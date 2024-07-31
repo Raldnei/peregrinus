@@ -25,13 +25,14 @@ body::before { /* Padrão Body */
     padding-right: 28vw;
 }
 .titulo{
-    font-size: clamp(40px, 2vh , 90px);
+    font-size: 3em;
     font-family: Montserrat, sans-serif;
     color: rgba(255, 255, 255, 0.938);
+    padding-bottom: 4vh;
 }
 div#principal{
-    height: 38em;
-    width: 50em;
+    height: 78vh;
+    width: 100vh;
     background-color: #0b2475;
     display: flex;
     flex-direction: column;
@@ -51,23 +52,23 @@ div#codigo{
     align-items: center;
 }
 img#entrega{
-    width: 18em;
-    height: 18em;
+    width: 20vw;
+    height: 20vh;
 }
 div#texto{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 3em;
+    padding-bottom: 3vh;
 }
 h2#titulo2{
-    font-size: clamp(25px, 2vh , 40px);
+    font-size: 1.6em;
     font-family: Montserrat, sans-serif;
     color: rgba(255, 255, 255, 0.938);
-    padding-left: 5em;
+    padding-left: 5vw;
 }
 p#aleatorio{
-    font-size: clamp(18px, 2vh , 30px);
+    font-size: 1.2em;
     font-family: Montserrat, sans-serif;
     color: rgba(255, 255, 255, 0.938);
 }
@@ -77,8 +78,8 @@ div#lista{
     gap: none;
 }
 img#check{
-    width: 10em;
-    height: 10em;
+    width: 25vh;
+    height: 25vw;
 }
 ul#l{
     font-family: Montserrat, sans-serif;
@@ -86,18 +87,18 @@ ul#l{
     list-style-type: none;
 }
 li{
-    font-size: clamp(12px, 2vh , 45px);
+    font-size: 0.8em;
 }
 div#lista1{
-    padding-right: 5em;
+    padding-right: 7vw;
 }
 button#b1{
-    height: 5em;
-    width: 30em;
+    height: 8vh;
+    width: 30vw;
     background-color: rgb(0, 174, 255);
-    border-radius: 0.75em;
+    border-radius: 10vh;
     color: white;
-    font-size: clamp(10px,2vh,25px);
+    font-size: 1.2em;
 }
 
 button#b1:hover{
