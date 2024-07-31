@@ -5,66 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../styles/compra.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Finalização de Compra</title>
 </head>
 <body>
-    <main id="compras"> 
-        <div id="principal">
-            <header><h1 class="final">Finalizar Compra</h1></header>
-           
+    <main id="compras" class="container text-white "> 
+        <div id="principal" class="container bg-dark ">
+            <header><h1 class="final text-center">Finalizar Compra</h1></header>
             <div class="container-fluid" id="conteudo-divisao">
-                <div class="produto" id="produtoUm">
-                    <img src="../images/prod1.jpg" alt="produto2" class="produtos">
-                    <h2 class="tproduto">tabuleiro</h2>
-                    <p class="preço">59.00</p>
-                    <div class="botao" id="idbotao">
-                        <button type="button"  class="btn btn-danger botao-menos" onclick="contador()">-</button>
-                        <p class="contador" id="contador">0</p>
-                        <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
-                       
+                <div class="row">
+                    <div class="produto col-12 col-md-6 col-lg-4" id="produtoUm">
+                        <img src="../images/prod1.jpg" alt="produto2" class="produtos">
+                        <h2 class="tproduto">Tabuleiro</h2>
+                        <p class="preco">R$ 59,00</p>
+                        <div class="botao" id="idbotao">
+                            <button type="button" class="btn btn-danger botao-menos" onclick="contador()">-</button>
+                            <p class="contador" id="contador">0</p>
+                            <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
+                        </div>
+                    </div>
+                    <div class="produto col-12 col-md-6 col-lg-4" id="produtoDois">
+                        <img src="../images/prod1.jpg" alt="produto2" class="produtos">
+                        <h2 class="tproduto">Tabuleiro</h2>
+                        <p class="preco">R$ 59,00</p>
+                        <div class="botao">
+                            <button type="button" class="btn btn-danger botao-menos" onclick="contador()">-</button>
+                            <p class="contador">0</p>
+                            <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
+                            
+                            
+                        </div>
                     </div>
                 </div>
-                <div class="produto" id="produtoDois">
-                    <img src="../images/prod1.jpg" alt="produto2" class="produtos">
-                    <h2 class="tproduto">tabuleiro</h2>,
-                    <p class="preço">59.00</p>
-                    <div class="botao">
-                        <button type="button" class="btn btn-danger botao-menos" onclick="contador()">-</button>
-                        <p class="contador">0</p>
-                        <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
-                        
-                    </div>
-                </div>
-                <div id="selecionar">
-                    <div classe="forma">
+                <div class="row" id="selecionar">
+                    <div class="col-12 forma">
                         <h2 class="h">Selecione forma de pagamento</h2>
-                        <div id='descrição'>
-                            <img src="../images/boleto-logo.svg" alt="boleto" id="boleto">
-                            <div id="descrição1">
-                                <p class="normal">Pague em Boleto</p>
-                                <p class="normal">aprovação imediata</p>
-                            </div>
+                        <div id="descricao" class="">
+                            <i class="fa-solid fa-receipt fa-2x" id="boleto"></i>
+                            <p class="normal m-0" id="querover">Pague em Boleto</p>
                         </div>
                     </div>
                 </div>
-                <div id="d2">
-                    <div id="entrega">
-                        <img src="../images/entrega.svg" alt="entregadora" id="ent">
+                <div class="row" id="d2">
+                    <div class="col-12 col-md-6 text-center mb-3" id="entrega">
+                        <img src="../images/entrega.svg" alt="entregadora" id="ent" class="mb-2">
                         <div id="img">
-                             <p class="normal">entrega premium</p>
-                             <p class="normal">receba amanhã - R$:9,90</p>
+                            <p class="normal">Entrega premium</p>
+                            <p class="normal">Receba amanhã - R$ 9,90</p>
                         </div>
                     </div>
-                    <div id="valores">
-                        <h2 id="preco-total">Total de Produtos: </h2>
-                        <h2 id="frete">Frete: R$:9,90 </h2>
-                        <h2 id="Desconto">Desconto: </h2>
+                    <div class="col-12 col-md-6 text-center" id="valores">
+                        <h2 id="preco-total">Total de Produtos: R$ 59,00</h2>
+                        <h2 id="frete">Frete: R$ 9,90</h2>
+                        <h2 id="Desconto">Desconto: R$ 0,00</h2>
                     </div>
                 </div>
-                <div id="finalizado">
-                    <p id='pagamento'>total a pagar: </p>
-                    <button id="confirme">confirmar pagamento</button>
+                <div class="row" id="finalizado">
+                    <div class="col-12 text-center">
+                        <p id="pagamento">Total a pagar: R$ 68,90</p>
+                        <button id="confirme" class="btn btn-primary">Confirmar pagamento</button>
+                    </div>
                 </div>
             </div>
         </div>

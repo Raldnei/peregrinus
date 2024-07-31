@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/compra.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <title>Finalização de Compra</title>
+</head>
+<body>
+    <main id="compras" class="container bg-dark text-white"> 
+        <div id="principal">
+            <header><h1 class="final text-center">Finalizar Compra</h1></header>
+           
+            <div class="container-fluid" id="conteudo-divisao">
+                <div class="produto col-12 col-md-6 col-lg-4" id="produtoUm">
+                    <img src="../images/prod1.jpg" alt="produto2" class="produtos">
+                    <h2 class="tproduto">tabuleiro</h2>
+                    <p class="preço">59.00</p>
+                    <div class="botao" id="idbotao">
+                        <button type="button"  class="btn btn-danger botao-menos" onclick="contador()">-</button>
+                        <p class="contador" id="contador">0</p>
+                        <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
+                       
+                    </div>
+                </div>
+                <div class="produto" id="produtoDois">
+                    <img src="../images/prod1.jpg" alt="produto2" class="produtos">
+                    <h2 class="tproduto">tabuleiro</h2>,
+                    <p class="preço">59.00</p>
+                    <div class="botao">
+                        <button type="button" class="btn btn-danger botao-menos" onclick="contador()">-</button>
+                        <p class="contador">0</p>
+                        <button type="button" class="btn btn-success botao-mais" onclick="contador()">+</button>
+                        
+                    </div>
+                </div>
+                <div id="selecionar">
+                    <div classe="forma">
+                        <h2 class="h">Selecione forma de pagamento</h2>
+                        <div id='descrição'>
+                            <img src="../images/boleto-logo.svg" alt="boleto" id="boleto">
+                            <div id="descrição1">
+                                <p class="normal">Pague em Boleto</p>
+                                <p class="normal">aprovação imediata</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="d2">
+                    <div id="entrega">
+                        <img src="../images/entrega.svg" alt="entregadora" id="ent">
+                        <div id="img">
+                             <p class="normal">entrega premium</p>
+                             <p class="normal">receba amanhã - R$:9,90</p>
+                        </div>
+                    </div>
+                    <div id="valores">
+                        <h2 id="preco-total">Total de Produtos: </h2>
+                        <h2 id="frete">Frete: R$:9,90 </h2>
+                        <h2 id="Desconto">Desconto: </h2>
+                    </div>
+                </div>
+                <div id="finalizado">
+                    <p id='pagamento'>total a pagar: </p>
+                    <button id="confirme">confirmar pagamento</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="../scripts/script-test.js"></script>
+    <script src="../scripts/compra.js"></script>
+    
+</body>
+</html>

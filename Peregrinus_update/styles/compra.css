@@ -15,146 +15,43 @@ body::before { /* Padrão Body */
     z-index: -1;
 }
 
-p,h2,h2,h3{
-    color: white;
+.produto img {
+    width: 70%;
+    height: auto;
 }
-img#boleto{
-    width: 10vw;
-    height: 10vh;
+.produto {
+    text-align: center;
+    margin-bottom: 20px;
 }
-main#compras{
-    width: 100%;
-    height: 100vh;
+.botao {
     display: flex;
-    flex-direction: row;
-    align-items: center;
     justify-content: center;
-}
-div#principal{
-    padding-top: 8vh;
-    padding-bottom: 8vh;
-    width: 50%;
-    height: 95vh;
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.9);
-    border-radius: 1vw;
 }
-.produtos{
-    width: 15%;
-    height: 15vh;
-}
-.produto{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.botao{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
+.botao-menos, .botao-mais {
+    margin: 0 10px;
 }
 
-
-div#selecionar{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.forma img {
+    width: 8vh; /* Ajustar a largura conforme necessário */
+    height: auto;
+    max-width: 8vh;
 }
-.forma{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-div#descrição{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-div#descriçao1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-div#d2{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    padding-right: 15%;
-}
-img#ent{
-    width: 25%;
-    height: 25vh;
-}
-div#entrega{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-h2#preco-total{
-    font-size: 1.2em;
-    color: white;
-}
-h2#frete{
-    font-size: 1.2em;
-    color: white;
-}
-h2#Desconto{
-    font-size: 1.2em;
-    color: white;
-}
-div#finalizado{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-button#confirme{
-    background-color: rgb(68, 0, 255);
-    border-radius: 0.65rem;
+#entrega img{
     width: 60%;
-    height: 6vh;
+    height: auto;
 }
-button#confirme:hover{
-    background-color: rgb(11, 112, 112);
-}
-p#pagamento{
-    font-size: 1em;
-    color: white;
-} 
-
-.tproduto{
-    font-size: 1.8em;
-    color: white;
-    padding-left: 3%;
-    padding-right: 3%;
-}
-.final{
-    font-size: 2.4em;
-    color: white;
-}
-.preço{
-    font-size: 1em;
-    color:white;
-    padding-right: 3%;
-}
-.h{
-    font-size: 1.6em;
-    color: white;
-}
-.normal{
-    font-size: 1em;
-    color: white;
-}
-div#valores{
+#descricao {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#descricao1 {
+    margin-left: 10px;
+}
+@media (max-width: 768px) {
+    .produto, #selecionar, #d2, #finalizado {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
 }
