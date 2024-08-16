@@ -1,0 +1,23 @@
+const rotaAtendimento = require("./atendimentoRoute")
+const rotaEnvio = require("./EnvioRoute")
+const rotaCategoria = require("./CategoriaRoute")
+const rotaAdm = require("./AdmRoute")
+const rotaUsuario = require("./UsuarioRote")
+const rotaEstoque = require("./EstoqueRoute")
+const rotaRelatorio = require("./RelatorioRoute")
+const rotaProduto =require("./ProdutoRoute")
+const rotaCompras = require("./ComprasRoute")
+const rotaRealizar = require("./RealizarRoute")
+module.exports= (app) =>{
+    app.use(rotaAtendimento)
+    app.use(rotaEnvio)
+    app.use(rotaCategoria)
+    app.use(rotaAdm)
+    app.use(rotaUsuario)
+    app.use(rotaEstoque)
+    app.use(rotaRelatorio)
+    app.use(rotaProduto)
+    app.use(rotaCompras)
+    app.use(rotaRealizar)
+
+}
