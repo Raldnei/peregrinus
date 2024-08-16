@@ -7,7 +7,7 @@ body::before { /* Padrão Body */
     left: 0;
     min-width: 100%;
     height: 100%;
-    background-color: blue;
+    background-color: rgb(58, 106, 124);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -42,5 +42,5 @@ body::before { /* Padrão Body */
 }
 input[type="file"].form-control-file {
     width: auto;
-    display: inline-block;
+    display: inlin;
 }
