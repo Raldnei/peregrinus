@@ -17,7 +17,7 @@ body::before { /* Padrão Body */
 }
 
 .produto {
-    border: 1px solid #ffffff;
+    border: 1px solid var(--cor-bordas);
     height: 20%;
     margin: 2%;
     text-align: center;
@@ -25,8 +25,9 @@ body::before { /* Padrão Body */
     
 }
 .produto img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
+   
 }
 #produtos-container{
     overflow-y: auto;
@@ -34,25 +35,28 @@ body::before { /* Padrão Body */
 }
 #produtos{
     border-radius: 5px;
-    background-color: #011f38;
+    background-color: var(--cor-container-color);
 }
 
 .bloco-dos-produtos{
     padding: 5%;
 }
 .produto h3 {
-    color: aliceblue;
+    color: var(--cor-texto-color);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 .produto p{
-    color: aqua;
+    color: var(--cor-texto-color);
 }
 .filtros{
     border-radius: 5px;
-    background-color: #011f38;
+    background-color: var(--cor-container-color);
 }
 .produto a{
     text-decoration: none;
+}
+.produto:hover{
+    background-color: var(--cor-hover-produtos);
 }
