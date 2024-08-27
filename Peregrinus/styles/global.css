@@ -1,16 +1,17 @@
 :root{
-    --cor-background-color: rgb(248, 213, 168);
-    --cor-texto-color: #ffffff;
+    --cor-background-color: rgb(247, 230, 209);
+    --cor-texto-color: #020202;
     --cor-titulo-color: #000000;
     --cor-blocos-color: #000000;
-    --cor-container-color: #000000;
+    --cor-container-color: ;
     --cor-header-background-color: #000000;
     --cor-header-items-color: #00AFEF;
     --cor-footer-background-color: #000000;
     --cor-footer-items-color: #00AFEF;
     --cor-hover-header: #ffffff;
-    --cor-bordas: #eb0000;
+    --cor-bordas: #ffffff;
     --cor-hover-produtos: #00AFEF;
     --cor-body: #cec8c8;
+    --cor-preco: rgb(0, 0, 0);
     
 }

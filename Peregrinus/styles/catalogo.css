@@ -8,7 +8,7 @@ body::before { /* Padrão Body */
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/background-dragons.svg);
+    background-color: var(--cor-background-color);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -32,10 +32,12 @@ body::before { /* Padrão Body */
 #produtos-container{
     overflow-y: auto;
     
+    
 }
 #produtos{
     border-radius: 5px;
     background-color: var(--cor-container-color);
+    border: 1px solid var(--cor-bordas)
 }
 
 .bloco-dos-produtos{
@@ -46,17 +48,27 @@ body::before { /* Padrão Body */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-size: smaller;
 }
 .produto p{
-    color: var(--cor-texto-color);
+    color: var(--cor-preco);
+    font-size: large;
+    font-weight: bold;
+
 }
 .filtros{
     border-radius: 5px;
     background-color: var(--cor-container-color);
+    color: var(--cor-texto-color);
 }
 .produto a{
     text-decoration: none;
 }
 .produto:hover{
     background-color: var(--cor-hover-produtos);
+}
+input[type="checkbox"] {
+    border: 1px solid #000000;
+    width: 16px; 
+    height: 16px;
 }
