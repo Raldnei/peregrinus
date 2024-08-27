@@ -12,11 +12,8 @@
       { "source": "/produto", "destination": "Peregrinus/pages/produto.html" },
       { "source": "/qrcode", "destination": "Peregrinus/pages/qrcode.html" },
       { "source": "/rastreamento", "destination": "Peregrinus/pages/rastreamento.html" },
-      { "source": "/status_positivo", "destination": "Peregrinus/pages/status_positivo.html" },
+      { "source": "/status-positivo", "destination": "Peregrinus/pages/status_positivo.html" },
       { "source": "/vendas", "destination": "Peregrinus/pages/vendas.html" }
-    ],
-  
-    "static": {
-      "directory": "/Peregrinus"
-    }
+    ]
   }
+ 
