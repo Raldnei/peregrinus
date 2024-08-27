@@ -161,7 +161,7 @@ function loadHeader() {
                         <a class="nav-link" href="https://peregrinus.vercel.app/menu">
                             <i class="fas fa-user"></i> Meu Perfil
                         </a>
-                        <a class="nav-link" href="https://peregrinus.vercel.app/menu">
+                        <a class="nav-link" href="https://peregrinus.vercel.app/catalogo">
                             <i class="fas fa-shopping-bag"></i> Loja
                         </a>
                     </div>
