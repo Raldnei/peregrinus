@@ -1,19 +1,19 @@
 {
     "rewrites": [
-      { "source": "/cadastro", "destination": "Peregrinus/pages/cadastro.html" },
-      { "source": "/cadastro_produto", "destination": "Peregrinus/pages/cadastro_produto.html" },
-      { "source": "/catalogo", "destination": "Peregrinus/pages/Catalogo.html" },
-      { "source": "/compra", "destination": "Peregrinus/pages/compra.html" },
-      { "source": "/formulario", "destination": "Peregrinus/pages/formulario.html" },
-      { "source": "/gerenciamento_estoque", "destination": "Peregrinus/pages/gerenciamento_estoque.html" },
-      { "source": "/login", "destination": "Peregrinus/pages/login.html" },
-      { "source": "/menu", "destination": "Peregrinus/pages/menu.html" },
-      { "source": "/meus_pedidos", "destination": "Peregrinus/pages/meus_pedidos.html" },
-      { "source": "/produto", "destination": "Peregrinus/pages/produto.html" },
-      { "source": "/qrcode", "destination": "Peregrinus/pages/qrcode.html" },
-      { "source": "/rastreamento", "destination": "Peregrinus/pages/rastreamento.html" },
-      { "source": "/status_positivo", "destination": "Peregrinus/pages/status_positivo.html" },
-      { "source": "/vendas", "destination": "Peregrinus/pages/vendas.html" }
+      { "source": "/cadastro", "destination": "/Peregrinus/pages/cadastro.html" },
+      { "source": "/cadastro_produto", "destination": "/Peregrinus/pages/cadastro_produto.html" },
+      { "source": "/catalogo", "destination": "/Peregrinus/pages/Catalogo.html" },
+      { "source": "/compra", "destination": "/Peregrinus/pages/compra.html" },
+      { "source": "/formulario", "destination": "/Peregrinus/pages/formulario.html" },
+      { "source": "/gerenciamento_estoque", "destination": "/Peregrinus/pages/gerenciamento_estoque.html" },
+      { "source": "/login", "destination": "/Peregrinus/pages/login.html" },
+      { "source": "/menu", "destination": "/Peregrinus/pages/menu.html" },
+      { "source": "/meus_pedidos", "destination": "/Peregrinus/pages/meus_pedidos.html" },
+      { "source": "/produto", "destination": "/Peregrinus/pages/produto.html" },
+      { "source": "/qrcode", "destination": "/Peregrinus/pages/qrcode.html" },
+      { "source": "/rastreamento", "destination": "/Peregrinus/pages/rastreamento.html" },
+      { "source": "/status_positivo", "destination": "/Peregrinus/pages/status_positivo.html" },
+      { "source": "/vendas", "destination": "/Peregrinus/pages/vendas.html" }
     ]
   }
   
