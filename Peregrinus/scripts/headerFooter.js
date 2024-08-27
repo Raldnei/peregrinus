@@ -1,7 +1,7 @@
 function loadHeader() {
 
     const headerHTML = `
-    <link rel="stylesheet" href="/styles/global.css">
+    <link rel="stylesheet" href="Peregrinus/styles/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -112,7 +112,7 @@ function loadHeader() {
             <!-- Logo -->
             <div id="logo">
                 <a href="https://peregrinus.vercel.app/">
-                    <img src="/images/logo_azul_final.svg" alt="Logo" height="75">
+                    <img src="Peregrinus/images/logo_azul_final.svg" alt="Logo" height="75">
                 </a>
                 <!-- Botão do Menu (Hamburger) -->
                 <button class="navbar-toggler d-md-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -257,7 +257,7 @@ function loadFooter() {
         <div class="footer-content container d-flex">
             <!-- Lado Esquerdo: Logo e Copyright -->
             <div class="logo"><!-- O logo é o nome da classe -->
-                <img src="/images/logo_azul_final.svg" alt="Logo">
+                <img src="Peregrinus/images/logo_azul_final.svg" alt="Logo">
                 <p class="copyright">&copy; Peregrinus 2024. Todos os direitos reservados.</p>
             </div>
 
