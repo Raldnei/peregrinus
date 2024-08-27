@@ -9,7 +9,7 @@
       { "source": "/login", "destination": "/pages/login.html" },
       { "source": "/menu", "destination": "/pages/menu.html" },
       { "source": "/meus_pedidos", "destination": "/pages/meus_pedidos.html" },
-      { "source": "/produto", "destination": "/pages/produto.html" },
+      { "source": "/produto", "destination": "Peregrinus/pages/produto.html" },
       { "source": "/qrcode", "destination": "/pages/qrcode.html" },
       { "source": "/rastreamento", "destination": "/pages/rastreamento.html" },
       { "source": "/status_positivo", "destination": "/pages/status_positivo.html" },
