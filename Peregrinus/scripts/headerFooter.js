@@ -111,7 +111,7 @@ function loadHeader() {
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <!-- Logo -->
             <div id="logo">
-                <a href="../pages/index.html">
+                <a href="https://peregrinus.vercel.app/">
                     <img src="../images/logo_azul_final.svg" alt="Logo" height="75">
                 </a>
                 <!-- Botão do Menu (Hamburger) -->
@@ -131,16 +131,16 @@ function loadHeader() {
                             <button class="btn btn-outline-primary" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
-                            <a class="nav-link nav-link-loja px-3" href="../pages/catalogo.html">LOJA</a>
+                            <a class="nav-link nav-link-loja px-3" href="https://peregrinus.vercel.app/catalogo">LOJA</a>
                         </div>
                     </form>
 
                     <!-- Links de Navegação (Aparecem em telas médias e maiores) -->
                     <div class="navbar-nav ms-auto d-none d-md-flex">
-                        <a class="nav-link" href="../pages/compra.html">
+                        <a class="nav-link" href="https://peregrinus.vercel.app/compra">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <a class="nav-link" href="../pages/menu.html">
+                        <a class="nav-link" href="https://peregrinus.vercel.app/menu">
                             <i class="fas fa-user"></i>
                         </a>
                     </div>
@@ -155,13 +155,13 @@ function loadHeader() {
                                 </button>
                             </div>
                         </form>
-                        <a class="nav-link" href="../pages/meus_pedidos.html">
+                        <a class="nav-link" href="https://peregrinus.vercel.app/meus-pedidos">
                             <i class="fas fa-shopping-cart"></i> Meus Pedidos
                         </a>
-                        <a class="nav-link" href="../pages/menu.html">
+                        <a class="nav-link" href="https://peregrinus.vercel.app/menu">
                             <i class="fas fa-user"></i> Meu Perfil
                         </a>
-                        <a class="nav-link" href="../pages/menu.html">
+                        <a class="nav-link" href="https://peregrinus.vercel.app/menu">
                             <i class="fas fa-shopping-bag"></i> Loja
                         </a>
                     </div>
