@@ -1,7 +1,7 @@
 function loadHeader() {
 
     const headerHTML = `
-    <link rel="stylesheet" href="Peregrinus/styles/global.css">
+    <link rel="stylesheet" href="../styles/global.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
@@ -111,8 +111,8 @@ function loadHeader() {
         <div class="container-fluid d-flex justify-content-center align-items-center">
             <!-- Logo -->
             <div id="logo">
-                <a href="https://peregrinus.vercel.app/">
-                    <img src="Peregrinus/images/logo_azul_final.svg" alt="Logo" height="75">
+                <a href="../pages/index.html">
+                    <img src="../images/logo_azul_final.svg" alt="Logo" height="75">
                 </a>
                 <!-- Botão do Menu (Hamburger) -->
                 <button class="navbar-toggler d-md-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -131,16 +131,16 @@ function loadHeader() {
                             <button class="btn btn-outline-primary" type="submit">
                                 <i class="fas fa-search"></i>
                             </button>
-                            <a class="nav-link nav-link-loja px-3" href="https://peregrinus.vercel.app/catalogo">LOJA</a>
+                            <a class="nav-link nav-link-loja px-3" href="../pages/Catalogo.html">LOJA</a>
                         </div>
                     </form>
 
                     <!-- Links de Navegação (Aparecem em telas médias e maiores) -->
                     <div class="navbar-nav ms-auto d-none d-md-flex">
-                        <a class="nav-link" href="https://peregrinus.vercel.app/compra">
+                        <a class="nav-link" href="../pages/compra.html">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
-                        <a class="nav-link" href="https://peregrinus.vercel.app/menu">
+                        <a class="nav-link" href="../pages/menu.html">
                             <i class="fas fa-user"></i>
                         </a>
                     </div>
@@ -155,13 +155,13 @@ function loadHeader() {
                                 </button>
                             </div>
                         </form>
-                        <a class="nav-link" href="https://peregrinus.vercel.app/meus-pedidos">
+                        <a class="nav-link" href="../pages/meus_pedidos.html">
                             <i class="fas fa-shopping-cart"></i> Meus Pedidos
                         </a>
-                        <a class="nav-link" href="https://peregrinus.vercel.app/menu">
+                        <a class="nav-link" href="../pages/menu.html">
                             <i class="fas fa-user"></i> Meu Perfil
                         </a>
-                        <a class="nav-link" href="https://peregrinus.vercel.app/catalogo">
+                        <a class="nav-link" href="../pages/Catalogo.html">
                             <i class="fas fa-shopping-bag"></i> Loja
                         </a>
                     </div>
@@ -257,7 +257,7 @@ function loadFooter() {
         <div class="footer-content container d-flex">
             <!-- Lado Esquerdo: Logo e Copyright -->
             <div class="logo"><!-- O logo é o nome da classe -->
-                <img src="Peregrinus/images/logo_azul_final.svg" alt="Logo">
+                <img src="../images/logo_azul_final.svg" alt="Logo">
                 <p class="copyright">&copy; Peregrinus 2024. Todos os direitos reservados.</p>
             </div>
 
