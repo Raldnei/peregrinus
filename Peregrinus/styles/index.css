@@ -59,7 +59,7 @@ color: #ffffff;
 }
 .carousel-item p:hover{
 background-color: #ffffff;
-color: #0004ff;
+color: var(--cor-background-login2);
 cursor: pointer;
 }
 .mudar-paginas{
@@ -82,10 +82,11 @@ cursor: pointer;
 }
 #Sobre-nos h2{
     color: #ffffff;
+    font-size: larger;
 }
 #Sobre-nos-historia, #Sobre-nos-valores, #Sobre-nos-missao{
-    background-color: #011f38b4;
-    color: #ffffff;
+    
+    color: var(--cor-texto-color);
     border-radius: 5px;
     font-size: larger;
     
@@ -103,7 +104,7 @@ cursor: pointer;
 
 
 .produto {
-    border: 1px solid var(--cor-bordas);
+    border: 1px solid var(--cor-background-login2);
     margin: 2%;
     text-align: center;
     border-radius: 5px;
@@ -152,10 +153,16 @@ cursor: pointer;
     text-decoration: none;
 }
 .produto:hover{
-    background-color: var(--cor-hover-produtos);
+    background-color: var(--cor-background-login1);
+    border-color: var(--cor-background-login2);
+    
 }
 input[type="checkbox"] {
-    border: 1px solid #000000;
+    border: 1px solid var(--cor-background-login2);
     width: 16px; 
     height: 16px;
+}
+
+.newsletter-bg{
+    background-color: var(--cor-header-background-color);
 }

@@ -137,6 +137,8 @@ function loadHeader() {
 
                     <!-- Links de Navegação (Aparecem em telas médias e maiores) -->
                     <div class="navbar-nav ms-auto d-none d-md-flex">
+                        <a class="nav-link" href="../pages/login.html"
+                            <h3>Acessar</h3></a>
                         <a class="nav-link" href="../pages/compra.html">
                             <i class="fas fa-shopping-cart"></i>
                         </a>
@@ -155,6 +157,8 @@ function loadHeader() {
                                 </button>
                             </div>
                         </form>
+                        <a class="nav-link" href="../pages/login.html"
+                            <h3>Acessar</h3></a>
                         <a class="nav-link" href="../pages/meus_pedidos.html">
                             <i class="fas fa-shopping-cart"></i> Meus Pedidos
                         </a>

@@ -52,7 +52,6 @@ body::before { /* Padrão Body */
 }
 .produto p{
     color: var(--cor-preco);
-    font-size: large;
     font-weight: bold;
 
 }

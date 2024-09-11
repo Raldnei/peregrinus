@@ -1,4 +1,6 @@
-*,*::after,*::before{box-sizing: border-box;}
+*,*::after,*::before{box-sizing: border-box;
+}
+
 
 .divlinks a{
 
@@ -7,7 +9,7 @@
     align-items: center;
     color: white;
     text-decoration: none;
-    background-color: rgb(4, 37, 128);
+    background-color: var(--cor-blocos-color);
     height: 8vh;
     border-radius: 15px;
     
@@ -43,4 +45,7 @@
 }
 .menus a:hover{
     background-color: aqua;
+}
+main{
+    background-color: var(--cor-background-color);
 }
