@@ -44,4 +44,16 @@ body::before { /* Padrão Body */
 input[type="file"].form-control-file {
     width: auto;
     display: inline;
+ 
+ 
+  
+}
+input[type="text"], 
+input[type="number"],  
+textarea, 
+select {
+    border: 1px solid var(--cor-container-color);
+}
+#descricao, #categoria{
+    border: 1px solid var(--cor-container-color);
 }
