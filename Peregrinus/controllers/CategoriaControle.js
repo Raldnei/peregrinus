@@ -29,9 +29,9 @@ class CategoriaControle{
     }
 
     criar(categoria){
-        const sql = "INSERT INTO categoria (ferro,plástico,masculina,feminina,espada,faca,arco,clava,machado) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+        const sql = "INSERT INTO Categoria (id_material, id_fantasia, id_armas) VALUES (?, ?, ?)";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[categoria.ferro, categoria.plástico,categoria.masculina,categoria.feminina,categoria.espada,categoria.faca,categoria.arco,categoria.clava,categoria.machado],(error,resposta)=>{
+            db.query(sql,[categoria.id_material, categoria.id_fantasia, categoria.id_armas],(error,resposta)=>{
                 if(error){
                     console.log("problema no post de envio");
                     reject(error)
@@ -42,11 +42,11 @@ class CategoriaControle{
         })
     }
 
-    alterar(ferro,plástico,masculina,feminina,espada,faca,arco,clava,machado, id){
+    alterar(id_material, id_fantasia, id_armas, id){
         
-        const sql = "UPDATE categoria SET ferro= ?, plástico=?,masculina=?, feminina=?,espada=?,faca=?,arco=?,clava=?,machado=? WHERE id = ?";
+        const sql = "UPDATE categoria SET sid_material= ?, id_fantasia=?, id_armas=? WHERE id = ?";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[ferro,plástico,masculina,feminina,espada,faca,arco,clava,machado,id],(error,resposta)=>{
+            db.query(sql,[id_material, id_fantasia, id_armas,id],(error,resposta)=>{
                 if(error){
                     console.log("Algum problema ocorreu");
                     reject(error)

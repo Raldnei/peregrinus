@@ -1,24 +1,24 @@
 const routerEnvio = require("express").Router;
 const router = routerEnvio();
-const estoqueControle = require("../controllers/EstoqueControle");
+const envioControle = require("../controllers/EstoqueControle");
 
 router.get("/estoque", (req,res)=>{
-    const resposta = estoqueControle.buscar();
+    const resposta = envioControle.buscar();
     resposta.then(envio => res.status(200).json(envio)).catch(error => res.status(400).json(error.message))
 
 })
 
 router.get("/estoque/:id", (req,res)=>{
     const id = req.params.id;
-    const resposta = estoqueControle.buscarId(id);
+    const resposta = envioControle.buscarId(id);
     resposta.then(envio => res.status(200).json(envio)).catch(error => res.status(400).json(error.message))
 
 })
 
 router.post("/estoque",(req,res)=>{
-    const novoEstoque = req.body;
+    const novoAtendimento = req.body;
 
-    const resposta = estoqueControle.criar(novoEstoque)
+    const resposta = envioControle.criar(novoAtendimento)
     resposta.then(envio => res.status(200).json(envio)).catch(error => res.status(400).json
     (error.message))
 
@@ -26,16 +26,16 @@ router.post("/estoque",(req,res)=>{
 
 router.put("/estoque/:id",(req,res)=>{
     const id = req.params.id;
-    const estoque = req.body;
+    const envio = req.body;
     
-    const resposta = estoqueControle.alterar(estoque.quant_produtos,estoque.id_adm,id)
+    const resposta = envioControle.alterar(envio.quant_produtos,envio.id_adm,id)
     resposta.then(envio => res.status(200).json(envio)).catch(error => res.status(404).json
-    (error.message))
+    (error.message + "arara"))
 })
 
 router.delete("/estoque/:id",(req,res)=>{
     const id = req.params.id;
-    const resposta = estoqueControle.apagar(id)
+    const resposta = envioControle.apagar(id)
     resposta.then(envio => res.status(200).json(envio)).catch(error => res.status(404).json
     (error.message))
 })

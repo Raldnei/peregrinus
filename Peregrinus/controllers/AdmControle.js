@@ -29,7 +29,7 @@ class AdmControle{
     }
 
     criar(adm){
-        const sql = "INSERT INTO adm (login, senha) VALUES ( ?, ?)";
+        const sql = "INSERT into adm (login,senha) VALUES (?, ?)";
         return new Promise((resolve,reject)=>{
             db.query(sql,[adm.login,adm.senha],(error,resposta)=>{
                 if(error){
@@ -44,9 +44,9 @@ class AdmControle{
 
     alterar(login,senha, id){
         
-        const sql = "UPDATE adm SET login= ?, Senha=? WHERE id = ?";
+        const sql = "UPDATE adm SET login= ?, senha=?  WHERE id = ?";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[login, senha,id],(error,resposta)=>{
+            db.query(sql,[login,senha,id],(error,resposta)=>{
                 if(error){
                     console.log("Algum problema ocorreu");
                     reject(error)

@@ -1,4 +1,4 @@
-const db = require("../infraestrutura/conexao");
+const db = require("../infraestrutura/conexao")
 class EstoqueControle{
     buscar(){
         const sql = "SELECT * from estoque";
@@ -58,7 +58,7 @@ class EstoqueControle{
     }
 
     apagar(id){
-        const sql = "Delete from estoque WHERE id = ?";
+        const sql = "Delete from envio WHERE id = ?";
         return new Promise((resolve,reject)=>{
             db.query(sql,[id],(error,resposta)=>{
                 if(error){

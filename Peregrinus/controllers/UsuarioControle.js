@@ -15,38 +15,23 @@ class UsuarioControle{
     }
 
     buscarId(id){
-        const sql = "SELECT * from usuario where id=?";
+        const sql = "SELECT * from usuario WHERE id=?";
         return new Promise((resolve,reject)=>{
             db.query(sql,[id],(error,resposta)=>{
                 if(error){
                     console.log("Problema no get do envio");
                     reject(error)
                 }
-                console.log("Solicitação Get recebida"+id)
+                console.log("Solicitação Get por id recebida")
                 resolve(resposta)
             })
         })
     }
 
-
-
-  
-
     criar(usuario){
-        const sql = "INSERT INTO usuario (login, senha, email, numero_cartao, cod_cartao, validade, nome_titular, cep, cidade, numero_casa, bairro, complemento) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+        const sql = "INSERT INTO Usuario (login, senha, nome, cpf, email, logradouro, numero, bairro, cidade, complemento,num_cartao, validade, titular, cod_sec) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?);";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[usuario.login,
-                usuario.senha,
-                usuario.email,
-                usuario.numero_cartao,
-                usuario.cod_cartao,
-                usuario.validade,
-                usuario.nome_titular,
-                usuario.cep,
-                usuario.cidade,
-                usuario.numero_casa,
-                usuario.bairro,
-                usuario.complemento || null],(error,resposta)=>{
+            db.query(sql,[ usuario.login,usuario.senha,usuario.nome,usuario.cpf,usuario.email,usuario.logradouro,usuario.numero,usuario.bairro,usuario.cidade,usuario.complemento,usuario.num_cartao,usuario.validade,usuario.titular,usuario.cod_sec],(error,resposta)=>{
                 if(error){
                     console.log("problema no post de envio");
                     reject(error)
@@ -57,11 +42,11 @@ class UsuarioControle{
         })
     }
 
-    alterar(login,senha,email,numero_cartao,cod_cartao,cartao,validade,nome_titular,cep,cidade,numero_casa,bairro,complemento, id){
+    alterar(login, senha, nome, cpf, email, logradouro, numero, bairro, cidade, complemento, num_cartao, validade, titular, cod_sec, id){
         
-        const sql = "UPDATE usuario SET login= ?, senha=?, email=?, numero_cartao=?, cod_cartao=?,cartao=?, validade=?,nome_titular=?,cep=?,cidade=?,numero_casa=?,bairro=?,complemento=? WHERE id = ?";
+        const sql = " UPDATE Usuario SET login = ?,senha = ?,nome = ?,cpf = ?,email = ?,logradouro = ?,numero = ?,bairro = ?,cidade = ?,complemento = ?,num_cartao = ?,validade = ?,titular = ?,cod_sec= ? WHERE id = ?";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[login,senha,email,numero_cartao,cod_cartao,cartao,validade,nome_titular,cep,cidade,numero_casa,bairro,complemento,id],(error,resposta)=>{
+            db.query(sql,[login, senha, nome, cpf, email, logradouro, numero, bairro, cidade, complemento, num_cartao, validade, titular, cod_sec, id],(error,resposta)=>{
                 if(error){
                     console.log("Algum problema ocorreu");
                     reject(error)

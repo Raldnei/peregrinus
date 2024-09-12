@@ -28,7 +28,7 @@ router.put("/envio/:id",(req,res)=>{
     const id = req.params.id;
     const envio = req.body;
     
-    const resposta = envioControle.alterar(envio.status,envio.data_envio,envio.data_chegada_prevista,id)
+    const resposta = envioControle.alterar(envio.status_envio,envio.data_envio,envio.data_chegada_prevista,id)
     resposta.then(envio => res.status(200).json(envio)).catch(error => res.status(404).json
     (error.message))
 })

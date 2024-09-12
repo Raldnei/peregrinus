@@ -1,23 +1,36 @@
-const rotaAtendimento = require("./atendimentoRoute")
+
 const rotaEnvio = require("./EnvioRoute")
-const rotaCategoria = require("./CategoriaRoute")
 const rotaAdm = require("./AdmRoute")
-const rotaUsuario = require("./UsuarioRote")
-const rotaEstoque = require("./EstoqueRoute")
-const rotaRelatorio = require("./RelatorioRoute")
-const rotaProduto =require("./ProdutoRoute")
-const rotaCompras = require("./ComprasRoute")
-const rotaRealizar = require("./RealizarRoute")
+const rotaMaterial = require("./MaterialRoute")
+const rotaFantasia = require('./FantasiaRoute')
+const rotaUsuario = require('./UsuarioRoute')
+const rotaPagamento = require('./PagamentoRoute')
+const rotaArmas = require('./ArmasRoute')
+const rotaCategoria = require('./CategoriaRoute')
+const rotaCompras = require('./ComprasRoute')
+const rotaEstoque=require('./EstoqueRoute')
+const rotaInserido = require('./InseridoRoute')
+const rotaPertence = require('./PertenceRoute')
+const rotaProduto = require('./ProdutoRoute')
+
+
 module.exports= (app) =>{
-    app.use(rotaAtendimento)
-    app.use(rotaEnvio)
-    app.use(rotaCategoria)
     app.use(rotaAdm)
-    app.use(rotaUsuario)
-    app.use(rotaEstoque)
-    app.use(rotaRelatorio)
-    app.use(rotaProduto)
+    app.use(rotaArmas)
+    app.use(rotaCategoria)
     app.use(rotaCompras)
-    app.use(rotaRealizar)
+    app.use(rotaEnvio)
+    app.use(rotaEstoque)
+    app.use(rotaFantasia)
+    app.use(rotaInserido)
+    app.use(rotaMaterial)
+    app.use(rotaPagamento)
+    app.use(rotaPertence)
+    app.use(rotaProduto)
+    app.use(rotaUsuario)
+    
+    
+
+
 
 }

@@ -29,9 +29,9 @@ class EnvioControle{
     }
 
     criar(envio){
-        const sql = "INSERT INTO envio (status,data_envio, data_chegada_prevista) VALUES (?, ?, ?)";
+        const sql = "INSERT INTO envio (status_envio,data_envio, data_chegada_prevista) VALUES (?, ?, ?)";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[envio.status, envio.data_envio,envio.data_chegada_prevista],(error,resposta)=>{
+            db.query(sql,[envio.status_envio, envio.data_envio,envio.data_chegada_prevista],(error,resposta)=>{
                 if(error){
                     console.log("problema no post de envio");
                     reject(error)
@@ -42,11 +42,11 @@ class EnvioControle{
         })
     }
 
-    alterar(status,data_envio,data_chegada_prevista, id){
+    alterar(status_envio,data_envio,data_chegada_prevista, id){
         
-        const sql = "UPDATE envio SET status= ?, data_envio=?, data_chegada_prevista=? WHERE id = ?";
+        const sql = "UPDATE envio SET status_envio= ?, data_envio=?, data_chegada_prevista=? WHERE id = ?";
         return new Promise((resolve,reject)=>{
-            db.query(sql,[status, data_envio, data_chegada_prevista,id],(error,resposta)=>{
+            db.query(sql,[status_envio, data_envio, data_chegada_prevista,id],(error,resposta)=>{
                 if(error){
                     console.log("Algum problema ocorreu");
                     reject(error)
