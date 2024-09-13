@@ -20,8 +20,6 @@
         <label for="valor">Valor:</label>
         <input type="number" id="valor" name="valor" step="0.01" required>
         <br>
-        <label for="cod_estoque">Código do Estoque:</label>
-        <input type="number" id="cod_estoque" name="cod_estoque" required>
         <br>
         <label for="id_adm">ID do Administrador:</label>
         <input type="number" id="id_adm" name="id_adm" required>
@@ -40,7 +38,6 @@
                 foto: formData.get('foto'),
                 descricao: formData.get('descricao'),
                 valor: parseFloat(formData.get('valor')),
-                cod_estoque: parseInt(formData.get('cod_estoque')),
                 id_adm: parseInt(formData.get('id_adm'))
             };
 

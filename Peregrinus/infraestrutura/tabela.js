@@ -7,7 +7,6 @@ class Tabelas{
         this.criarTabelaFantasia();
         this.criarTabelaArmas();
         this.criarTabelaCategoria();
-        this.criarTabelaEstoque();
         this.criarTabelaEnvio();
         this.criarTabelaUsuario();
         this.criarTabelaPagamento();
@@ -22,10 +21,6 @@ class Tabelas{
        
 
     }
-
-    
-
-
     criarTabelaEnvio(){
         const sql ="create table  if not exists envio(id integer auto_increment primary key not null,status_envio boolean not null,data_envio date not null,data_chegada_prevista date not null);"
 
@@ -168,30 +163,16 @@ class Tabelas{
             });
         });
     }
-
-    criarTabelaEstoque(){
-        const sql ="create table if not exists estoque(id integer auto_increment primary key not null,quant_produtos integer not null,id_adm integer not null,foreign key (id_adm) references Adm(id));"
-
-        this.conexao.query(sql, (error)=>{
-            if(error){
-                console.log("erro na table Pagamento"+ error.message)
-                return;
-            }
-            console.log("Criada table Pagamento com sucesso")
-        });
-    }
     
     criarTabelaProduto() {
         const sql = `
             CREATE TABLE IF NOT EXISTS Produto (
                 id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,
                 nome VARCHAR(40) NOT NULL,
-                foto MEDIUMTEXT NOT NULL,
-                descricao VARCHAR(80) NOT NULL,
+                foto MEDIUMTEXT NULL,
+                descricao VARCHAR(80) NULL,
                 valor FLOAT NOT NULL,
-                cod_estoque INTEGER NOT NULL,
                 id_adm INTEGER NOT NULL,
-                FOREIGN KEY (cod_estoque) REFERENCES Estoque(id),
                 FOREIGN KEY (id_adm) REFERENCES Adm(id)
             );
         `;

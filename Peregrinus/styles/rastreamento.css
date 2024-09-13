@@ -7,7 +7,7 @@ body::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/background-dragons.svg);
+    background-image: var(--cor-background-color);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -34,7 +34,7 @@ div#principal {
     height: auto;
     width: 100%;
     max-width: 1200px;
-    background-color: #0b2475;
+    background-color: var( --cor-background-login1);
     display: flex;
     flex-direction: column;
     justify-content: center;

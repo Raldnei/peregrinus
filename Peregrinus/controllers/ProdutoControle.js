@@ -30,9 +30,9 @@ class ProdutoControle {
     }
 
     criar(produto) {
-        const sql = "INSERT INTO Produto (nome, foto, descricao, valor, cod_estoque, id_adm) VALUES (?, ?, ?, ?, ?, ?)";
+        const sql = "INSERT INTO Produto (nome, foto, descricao, valor, id_adm) VALUES (?, ?, ?, ?, ?)";
         return new Promise((resolve, reject) => {
-            db.query(sql, [produto.nome, produto.foto, produto.descricao, produto.valor, produto.cod_estoque, produto.id_adm], (error, resposta) => {
+            db.query(sql, [produto.nome, produto.foto, produto.descricao, produto.valor, produto.id_adm], (error, resposta) => {
                 if (error) {
                     console.log("Problema no post de produto");
                     return reject(error);
@@ -43,10 +43,10 @@ class ProdutoControle {
         });
     }
 
-    alterar(nome, foto, descricao, valor, cod_estoque, id_adm, id) {
-        const sql = "UPDATE Produto SET nome = ?, foto = ?, descricao = ?, valor = ?, cod_estoque = ?, id_adm = ? WHERE id = ?";
+    alterar(nome, foto, descricao, valor, id_adm, id) {
+        const sql = "UPDATE Produto SET nome = ?, foto = ?, descricao = ?, valor = ?, id_adm = ? WHERE id = ?";
         return new Promise((resolve, reject) => {
-            db.query(sql, [nome, foto, descricao, valor, cod_estoque, id_adm, id], (error, resposta) => {
+            db.query(sql, [nome, foto, descricao, valor, id_adm, id], (error, resposta) => {
                 if (error) {
                     console.log("Algum problema ocorreu ao atualizar o produto");
                     return reject(error);
