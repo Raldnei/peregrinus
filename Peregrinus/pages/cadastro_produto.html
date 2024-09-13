@@ -13,13 +13,14 @@
         integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <title>Cadastro de Produto</title>
+    
 </head>
 
 <body>
     <main class="principal d-flex flex-column align-items-center text-center">
         <div class="container col-11 col-lg-6">
             <section id="principal" class="my-4">
-                <form>
+                <form id="produtoForm" method="post">
                     <fieldset class="cad">
                         <section id="titulo">
                             <h1 class="t1 titulo-grande mb-3">Cadastro de Produto</h1>
@@ -27,16 +28,7 @@
                         <div class="row mb-3">
                             <div class="col-12">
                                 <label class="form-label titulo-edit">Nome do Produto:</label>
-                                <input type="text" class="form-control borda-pesquisa" name="nome_produto" id="nome_produto" required>
-                            </div>
-                        </div>
-
-                        <div class="mb-3 d-flex align-items-center flex-column">
-                            <div class="col-4">
-                                <label class="form-label titulo-edit">Foto do Produto:</label>
-                            </div>
-                            <div class="d-flex flex-column">
-                                <input type="file" class="form-control-file borda-pesquisa text-nowrap" name="foto_produto" id="foto_produto" accept="image/*" required>
+                                <input type="text" class="form-control borda-pesquisa" name="nome" id="nome" required>
                             </div>
                         </div>
 
@@ -52,12 +44,11 @@
                             </div>
                             <div class="col-12 col-md-6">
                                 <label class="form-label titulo-edit">Categoria:</label>
-                                <select class="form-control borda-pesquisa" name="categoria" id="categoria" required>
+                                <select class="form-control borda-pesquisa" name="categoria" id="categoria">
                                     <option value="" disabled selected>Selecione a categoria</option>
-                                    <option value="opcao">OP1</option>
-                                    <option value="opcao">OP2</option>
-                                    <option value="opcao">OP3</option>
-                                  
+                                    <option value="arma">Arma</option>
+                                    <option value="roupa">Roupa</option>
+                                    <option value="brinquedo">Brinquedo</option>
                                 </select>
                             </div>
                         </div>
@@ -67,19 +58,74 @@
                             <input type="number" class="form-control borda-pesquisa" name="estoque" id="estoque" min="0" required>
                         </div>
                         <section id="final1" class="mt-4">
-                            <a id="botao" class="btn btn-primary titulo-grande" href="../pages/index.html/" role="button">Adicionar Produto</a>
+                            <button type="submit" id="botao" class="btn btn-primary titulo-grande">Adicionar Produto</button>
                             <a class="botao2 btn btn-danger ms-2 titulo-grande" href="#" role="button">Excluir Produto</a>
                         </section>
                     </fieldset>
-                    
                 </form>
-                
             </section>
-            
         </div>
     </main>
-    <script src="../scripts/headerFooter.js"></script>
 
+    <script>
+        document.getElementById('produtoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+
+            const formData = new FormData(this);
+
+            // Obter o valor da categoria selecionada
+            const categoria = formData.get('categoria');
+            let categoriaValue;
+
+            // Definir valor padrão para a categoria
+            switch(categoria) {
+                case 'arma':
+                    categoriaValue = '1';
+                    break;
+                case 'roupa':
+                    categoriaValue = '1';
+                    break;
+                case 'brinquedo':
+                    categoriaValue = '1';
+                    break;
+                default:
+                    categoriaValue = '0';
+            }
+
+            // Preparar o produto com os valores
+            const produto = {
+                nome: formData.get('nome'),
+                descricao: formData.get('descricao'),
+                valor: parseFloat(formData.get('valor')),
+                id_adm: 1, // Valor padrão para id_adm
+                foto: formData.get('foto') ? formData.get('foto').name : 'default.jpg', // Valor padrão se não houver foto
+                fantasia: categoria === 'fantasia' ? 'escolheu fantasia' : '0',
+                material: categoria === 'material' ? 'escolheu material' : '0',
+                arma: categoria === 'arma' ? categoriaValue : '0',
+                roupa: categoria === 'roupa' ? categoriaValue : '0',
+                brinquedo: categoria === 'brinquedo' ? categoriaValue : '0',
+                estoque: parseInt(formData.get('estoque'))
+            };
+
+            fetch('http://127.0.0.1:3307/produto', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(produto)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert('Produto cadastrado com sucesso!');
+                document.getElementById('produtoForm').reset(); // Limpa o formulário após o envio
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao cadastrar produto.');
+            });
+        });
+    </script>
+    <script src="../scripts/headerFooter.js"></script>
 </body>
 
 </html>

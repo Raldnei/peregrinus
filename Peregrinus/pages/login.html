@@ -17,16 +17,15 @@
         <div class="login-container">
             <div class="login-box">
                 <h2>Acessar conta</h2>
-                <form action="#" method="POST">
+                <form id="loginForm" method="POST">
                     <div class="textbox">
                         <input type="email" id="email" name="email" placeholder="Insira seu Email" required>
                     </div>
                     <div class="textbox">
                         <input type="password" id="password" name="password" placeholder="Insira sua senha" required>
-                        
                     </div>
                     
-                    <button type="submit" href="../pages/index.html" class="btn">Acessar</button>
+                    <button type="submit" class="btn">Acessar</button>
                     <p class="signup-text"><a href="../pages/index.html">Esqueci a senha / IR PARA INDEX</a></p>
                     <p><a href="../pages/cadastro.html" class="mobile-register">Criar nova conta</a></p>
                 </form>
@@ -36,14 +35,50 @@
                     <img id="logo" src="../images/logo_branca.png" alt="">
                     <h2>Ainda não tem cadastro?</h2>
                     <p class="signup-text"><a href="../pages/cadastro.html">Clique aqui</a></p>
-                    
                 </div>
             </div>
         </div>
     </div>
 
     <script src="../scripts/script.js"></script>
-    
-    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Impede o comportamento padrão do formulário
+
+    const formData = new FormData(this);
+    const loginData = {
+        email: formData.get('email'),
+        password: formData.get('password')
+    };
+
+    fetch('http://127.0.0.1:3307/login', {  // Atualize o endpoint para '/login'
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(loginData)
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Erro HTTP: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            // Redirecionar para a página principal ou dashboard
+            window.location.href = '../pages/index.html';
+        } else {
+            // Mostrar mensagem de erro com detalhes
+            alert(`Erro: ${data.message || 'Email ou senha incorretos.'}`);
+        }
+    })
+    .catch(error => {
+        console.error('Erro:', error);
+        alert(`Erro ao tentar fazer login: ${error.message || 'Por favor, tente novamente.'}`);
+    });
+});
+
+    </script>
 </body>
 </html>

@@ -50,10 +50,7 @@ white-space: nowrap;  /* evitar quebra de linha */
 text-overflow: ellipsis; /* colocar ... ao invés de quebrar linha */
 border-radius: 0 0 5px 5px;
 }
-.fundo-destaque{ /* background geral dos destaques */
-background-color: #2900dd6b;
 
-}
 .titulo-destaques { /* titulos dos destaques */
 color: #ffffff;
 }
@@ -165,4 +162,14 @@ input[type="checkbox"] {
 
 .newsletter-bg{
     background-color: var(--cor-header-background-color);
+    border-color: #ffffff !important;
+}
+.btn-custom{
+    border-color: #ffffff !important;
+    color: #ffffff !important;
+}
+.btn-custom:hover{
+  background-color: #ffffff !important;
+  color: #000000 !important;
+  
 }

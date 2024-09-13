@@ -33,59 +33,76 @@
                         </div>
 
                         <div class="mb-3">
+                            <label class="form-label titulo-edit">Nome:</label>
+                            <input type="text" class="form-control" name="nome" id="nome" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label titulo-edit">CPF:</label>
+                            <input type="text" class="form-control" name="cpf" id="cpf" required>
+                        </div>
+
+                        <div class="mb-3">
                             <label class="form-label titulo-edit">Email:</label>
                             <input type="email" class="form-control" name="email" id="email" required>
                         </div>
-                        
+
                         <div class="mb-3">
-                            <label class="form-label titulo-edit">Número do Cartão:</label>
-                            <input type="text" class="form-control" name="numero_cartao" id="numero_cartao" required>
+                            <label class="form-label titulo-edit">Logradouro:</label>
+                            <input type="text" class="form-control" name="logradouro" id="logradouro" required>
                         </div>
-    
-                        <div class="row mb-3">
-                            <div class="col-12 col-md-6">
-                                <label class="form-label titulo-edit">Código do Cartão:</label>
-                                <input type="number" class="form-control" name="cod_cartao" id="cod_cartao" required>
-                            </div>
-                            
-                            <div class="col-12 col-md-6">
-                                <label class="form-label titulo-edit">Validade:</label>
-                                <input type="date" class="form-control" name="validade" id="validade" required>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
-                            <label class="form-label titulo-edit">Nome do Titular:</label>
-                            <input type="text" class="form-control" name="nome_titular" id="nome_titular" required>
-                        </div>
-                    </fieldset>
-                </form>
-                <div><h2 class="t2 my-4 titulo-grande">Endereço</h2></div>
-                <form id="enderecoForm">
-                    <fieldset class="cad">
-                        <div class="mb-3">
-                            <label class="form-label titulo-edit">CEP:</label>
-                            <input type="text" class="form-control" name="cep" id="cep" required>
-                        </div>
-    
+
                         <div class="row mb-3">
                             <div class="col-12 col-md-4">
-                                <label class="form-label titulo-edit">Cidade:</label>
-                                <input type="text" class="form-control" name="cidade" id="cidade" required>
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label class="form-label titulo-edit">Número da Casa:</label>
-                                <input type="number" class="form-control" name="numero_casa" id="numero_casa" required>
+                                <label class="form-label titulo-edit">Número:</label>
+                                <input type="number" class="form-control" name="numero" id="numero">
                             </div>
                             <div class="col-12 col-md-4">
                                 <label class="form-label titulo-edit">Bairro:</label>
                                 <input type="text" class="form-control" name="bairro" id="bairro" required>
                             </div>
+                            <div class="col-12 col-md-4">
+                                <label class="form-label titulo-edit">Cidade:</label>
+                                <input type="text" class="form-control" name="cidade" id="cidade" required>
+                            </div>
                         </div>
-    
+
                         <div class="mb-3">
                             <label class="form-label titulo-edit">Complemento:</label>
                             <input type="text" class="form-control" name="complemento" id="complemento">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label titulo-edit">Número do Cartão:</label>
+                            <input type="text" class="form-control" name="num_cartao" id="num_cartao" required>
+                        </div>
+
+                        <div class="row mb-3">
+                            <div class="row mb-3">
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label titulo-edit">Mês:</label>
+                                    <input type="number" class="form-control" name="mes_validade" id="mes_validade" min="1" max="12" placeholder="MM" required>
+                                </div>
+                            
+                                <div class="col-12 col-md-6">
+                                    <label class="form-label titulo-edit">Ano:</label>
+                                    <input type="number" class="form-control" name="ano_validade" id="ano_validade" min="2024" max="2099" placeholder="YYYY" required>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            
+                            <div class="col-12 col-md-6">
+                                <label class="form-label titulo-edit">Titular do Cartão:</label>
+                                <input type="text" class="form-control" name="titular" id="titular" required>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label titulo-edit">Código de Segurança:</label>
+                            <input type="number" class="form-control" name="cod_sec" id="cod_sec" required>
                         </div>
                     </fieldset>
                 </form>
@@ -100,21 +117,22 @@
     <script>
         function enviarDados() {
             const formData = new FormData(document.getElementById('usuarioForm'));
-            const enderecoData = new FormData(document.getElementById('enderecoForm'));
 
             const data = {
                 login: formData.get('login'),
                 senha: formData.get('senha'),
+                nome: formData.get('nome'),
+                cpf: formData.get('cpf'),
                 email: formData.get('email'),
-                numero_cartao: formData.get('numero_cartao'),
-                cod_cartao: parseInt(formData.get('cod_cartao')),
-                validade: formData.get('validade'), 
-                nome_titular: formData.get('nome_titular'),
-                cep: enderecoData.get('cep'),
-                cidade: enderecoData.get('cidade'),
-                numero_casa: parseInt(enderecoData.get('numero_casa')),
-                bairro: enderecoData.get('bairro'),
-                complemento: enderecoData.get('complemento') || null
+                logradouro: formData.get('logradouro'),
+                numero: parseInt(formData.get('numero')) || null,
+                bairro: formData.get('bairro'),
+                cidade: formData.get('cidade'),
+                complemento: formData.get('complemento') || null,
+                num_cartao: formData.get('num_cartao'),
+                validade: formData.get('validade'),
+                titular: formData.get('titular'),
+                cod_sec: parseInt(formData.get('cod_sec'))
             };
 
             fetch('http://localhost:3307/usuario', {
@@ -126,8 +144,13 @@
             })
             .then(response => response.json())
             .then(data => {
-                console.log('Sucesso:', data);
-        
+                if (data.success) {
+                    alert('Cadastro realizado com sucesso!');
+                    document.getElementById('usuarioForm').reset(); // Limpa o formulário
+                    window.location.href = '../pages/index.html'; // Redireciona ou faça outra ação
+                } else {
+                    alert('Erro ao cadastrar usuário:p ' + data.message);
+                }
             })
             .catch((error) => {
                 console.error('Erro:', error);

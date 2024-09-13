@@ -14,10 +14,10 @@
     <div class="p-2">
         <div class="row m-0">
             <!-- Filtro --> 
-            <div id="formulario-filtro" class="filtros col-md-2 col-3 d-flex flex-column flex-md-row ">
-                <form action="" class="mb-3 p-1 text-white filtros">
+            <div id="formulario-filtro" class="filtros col-md-2 col-3 d-flex flex-column flex-md-row">
+                <form id="filtro-form" class="mb-3 p-1 text-white filtros">
                     <input type="text" id="pesquisa" class="form-control" placeholder="Buscar">
-                    <label for="opcao" class="filtros" >Filtro</label>
+                    <label for="opcao" class="filtros">Filtro</label>
                     <select name="Opcao" id="opcao" class="form-control mb-3">
                         <option value="menor-preco">Menor preço</option>
                         <option value="maior-preco">Maior preço</option>
@@ -25,24 +25,24 @@
                         <option value="a-z">Ordem A-Z</option>
                         <option value="z-a">Ordem Z-A</option>
                     </select>
-                    <fieldset class="mb-3 filtros">
+                    <fieldset id="materiais" class="mb-3 filtros">
                         <legend>Material</legend>
-                        <label><input type="checkbox" class="form-check-input"> Ferro</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Madeira</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Plástico</label>
+                        <label><input type="checkbox" value="Ferro" class="form-check-input"> Ferro</label><br>
+                        <label><input type="checkbox" value="Madeira" class="form-check-input"> Madeira</label><br>
+                        <label><input type="checkbox" value="Plástico" class="form-check-input"> Plástico</label>
                     </fieldset>
-                    <fieldset class="mb-3 filtros">
+                    <fieldset id="fantasias" class="mb-3 filtros">
                         <legend>Fantasia</legend>
-                        <label><input type="checkbox" class="form-check-input"> Masculina</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Feminina</label>
+                        <label><input type="checkbox" value="Masculina" class="form-check-input"> Masculina</label><br>
+                        <label><input type="checkbox" value="Feminina" class="form-check-input"> Feminina</label>
                     </fieldset>
-                    <fieldset class="mb-3 filtros">
+                    <fieldset id="armas" class="mb-3 filtros">
                         <legend>Armas</legend>
-                        <label><input type="checkbox" class="form-check-input"> Espada</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Faca</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Arco</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Machado</label><br>
-                        <label><input type="checkbox" class="form-check-input"> Clava</label>
+                        <label><input type="checkbox" value="Espada" class="form-check-input"> Espada</label><br>
+                        <label><input type="checkbox" value="Faca" class="form-check-input"> Faca</label><br>
+                        <label><input type="checkbox" value="Arco" class="form-check-input"> Arco</label><br>
+                        <label><input type="checkbox" value="Machado" class="form-check-input"> Machado</label><br>
+                        <label><input type="checkbox" value="Clava" class="form-check-input"> Clava</label>
                     </fieldset>
                     <input type="submit" value="Filtrar" class="btn btn-primary">
                 </form>
@@ -50,58 +50,90 @@
             <!-- Produtos -->
             <section id="produtos" class="col-12 col-md-10 p-0 m-0">
                 <header><h1 class="text-center filtros P-0">Catálogo</h1></header>
-                <div class="row justify-content-center bloco-dos-produtos m-0 p-0 ">
-                    <article class="produto col-lg-2 col-md-2 col-3 p-1 m-1 col-xxl-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3  col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3 col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3  col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3 col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3 col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3 col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3 col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    <article class="produto col-lg-2 col-md-2 col-3 col-xxl-1 p-1 m-1">
-                        <a href="../pages/produto.html"><img src="../images/background-dragons.svg" alt="IMAGEM">
-                        <header><h3>nomeProduto</h3></header>
-                        <p>Preço R$ 25,00</p></a>
-                    </article>
-                    
-                    <!-- Adicione mais produtos conforme necessário -->
+                <div class="row justify-content-center bloco-dos-produtos m-0 p-0">
+                    <!-- Produtos serão adicionados dinamicamente aqui -->
                 </div>
             </section>
         </div>
     </div>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const form = document.getElementById('filtro-form');
+
+        // Função para carregar produtos
+        function carregarProdutos(params = '') {
+            fetch(`http://127.0.0.1:3307/produto?${params}`)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    if (!Array.isArray(data)) {
+                        throw new Error('Expected an array of products');
+                    }
+
+                    // Atualiza o DOM com os produtos retornados
+                    
+                    const produtosContainer = document.querySelector('#produtos .bloco-dos-produtos');
+                    produtosContainer.innerHTML = '';
+
+                    data.forEach(produto => {
+                        const produtoElement = document.createElement('article');
+                        produtoElement.classList.add('produto', 'col-lg-2', 'col-md-2', 'col-3', 'p-1', 'm-1');
+                        produtoElement.innerHTML = `
+                            <a href="../pages/produto.html?id=${produto.id}">
+                                <img src="../images/default.jpg" alt="IMAGEM" class="img-fluid">
+                                <header><h3>${produto.nome}</h3></header>
+                                <p>Preço R$ ${produto.valor.toFixed(2)}</p>
+ 
+                            </a>
+                        `; // <img src="${produto.foto}" alt="${produto.nome}">
+                        produtosContainer.appendChild(produtoElement);
+                    });
+                })
+                .catch(error => {
+                    console.error('Erro ao buscar produtos:', error);
+                });
+        }
+
+        // Carregar produtos automaticamente quando a página carrega
+        carregarProdutos();
+
+        // Evento de submissão do formulário de filtro
+        form.addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o envio do formulário
+
+            // Captura os valores dos filtros
+            const pesquisa = document.getElementById('pesquisa').value;
+            const opcao = document.getElementById('opcao').value;
+
+            // Captura os valores dos checkboxes
+            const materiais = Array.from(document.querySelectorAll('fieldset#materiais input[type="checkbox"]:checked'))
+                .map(cb => cb.value);
+
+            const fantasias = Array.from(document.querySelectorAll('fieldset#fantasias input[type="checkbox"]:checked'))
+                .map(cb => cb.value);
+
+            const armas = Array.from(document.querySelectorAll('fieldset#armas input[type="checkbox"]:checked'))
+                .map(cb => cb.value);
+
+            // Cria o objeto de parâmetros para a requisição
+            const params = new URLSearchParams({
+                pesquisa: pesquisa,
+                opcao: opcao,
+                materiais: materiais.join(','),
+                fantasias: fantasias.join(','),
+                armas: armas.join(',')
+            });
+
+            // Carregar produtos com filtros aplicados
+            carregarProdutos(params.toString());
+        });
+    });
+</script>
 
     <script src="../scripts/headerFooter.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

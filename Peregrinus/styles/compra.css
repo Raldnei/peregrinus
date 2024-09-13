@@ -15,49 +15,94 @@ body::before { /* Padrão Body */
     z-index: -1;
 }
 
-
-
-.produto img {
-    width: 70%;
-    height: auto;
-}
-.produto {
-    text-align: center;
-    margin-bottom: 20px;
-}
-.botao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.botao-menos, .botao-mais {
-    margin: 0 10px;
+#principal {
+    width: 50vw;
+    margin: 0 auto;
+    padding: 1.5rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.forma img {
-    width: 8vh; 
-    height: auto;
-    max-width: 8vh;
-}
-#entrega img{
-    width: 60%;
-    height: auto;
-}
-#descricao {
-    display: flex;
-    align-items: center;
-    color: #000;
-    
-}
-#descricao1 {
-    margin-left: 10px;
-}
+
 @media (max-width: 768px) {
     .produto, #selecionar, #d2, #finalizado {
         flex: 0 0 100%;
         max-width: 100%;
     }
 }
-#principal {
-    background-color: #ffffff;
+h1, h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 0.8rem;
+}
+
+.container {
+    max-width: 90%;
+}
+
+#produtos-compra {
+    padding: 1rem 0;
+}
+
+.produto {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.produto img {
+    width: 150px;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.botao button {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+}
+
+.contador {
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+#selecionar {
+    margin-top: 1.5rem;
+}
+
+#selecionar .forma {
+    padding: 1rem 0;
+    border-bottom: 1px solid #ddd;
+}
+
+#d2 {
+    padding: 1rem 0;
+}
+
+#entrega img {
+    width: 60px;
+    margin-bottom: 0.5rem;
+}
+
+#valores h2 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+#finalizado p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #28a745;
+}
+
+#finalizado a {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
 }

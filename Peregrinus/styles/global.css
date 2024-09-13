@@ -7,14 +7,14 @@
     --cor-blocos-color: #000000;
     --cor-container-color: ;
     --cor-header-background-color: #000000;
-    --cor-header-items-color: #00AFEF;
+    --cor-header-items-color: #ffffff;
     --cor-footer-background-color: #000000;
-    --cor-footer-items-color: #00AFEF;
-    --cor-hover-header: #ffffff;
+    --cor-footer-items-color: #ffffff;
+    --cor-hover-header: rgb(228, 171, 102);
     --cor-bordas: #000000;
-    --cor-hover-produtos: #00AFEF;
+    --cor-hover-produtos: rgb(228, 171, 102);
     --cor-body: #cec8c8;
     --cor-preco: rgb(0, 0, 0);
-    
+   /* #00AFEF */
     
 }

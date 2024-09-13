@@ -52,9 +52,10 @@ function contador(){
     else{
         document.getElementById('Desconto').textContent='Desconto: R$ 5,00'
     }
+    
 
     document.getElementById('preco-total').textContent = 'Total de Produtos: '+totalprodutos
     document.getElementById('pagamento').textContent = 'total a pagar: R$' + String(precoTotal.toFixed(2)).replace('.',',')
-
+    
 
 } 

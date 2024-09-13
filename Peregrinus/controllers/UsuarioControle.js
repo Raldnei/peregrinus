@@ -13,6 +13,22 @@ class UsuarioControle{
             })
         })
     }
+    buscarPorEmailESenha(email, senha) {
+        const sql = "SELECT * FROM usuario WHERE email = ? AND senha = ?";
+        return new Promise((resolve, reject) => {
+            db.query(sql, [email, senha], (error, resposta) => {
+                if (error) {
+                    console.log("Problema ao buscar usuário por email e senha");
+                    reject(error);
+                }
+                if (resposta.length > 0) {
+                    resolve(resposta[0]); // Retorna o primeiro resultado
+                } else {
+                    resolve(null); // Nenhum usuário encontrado
+                }
+            });
+        });
+    }
 
     buscarId(id){
         const sql = "SELECT * from usuario WHERE id=?";
@@ -73,5 +89,6 @@ class UsuarioControle{
 
 
 }
+
 
 module.exports = new UsuarioControle();

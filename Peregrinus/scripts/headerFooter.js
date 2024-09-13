@@ -13,7 +13,7 @@ function loadHeader() {
         #header {
              background-color: var(--cor-header-background-color);
         }
-             
+  
         #logo a {
             text-decoration: none;
             color: inherit;
@@ -25,6 +25,17 @@ function loadHeader() {
             max-width: 600px;
             margin: 0 auto; 
             min-width: 15%;
+            
+        }
+        .search-form .btn {
+            background-color: #ffffff; 
+            border-left: none;
+            border-color: #ffffff;
+            color: #000000;
+        }
+        .btn:hover {
+            color:var(--cor-background-login1); 
+            border-left: none;
         }
         .input-group {
             display: flex;
@@ -59,8 +70,9 @@ function loadHeader() {
             font-size: 24px;
             cursor: pointer;
         }
-        .close-btn:hover {
-            color: #ccc;
+        .close-btn:hover{
+            color: #ffffff;
+          
         }
         @media only screen and (max-width: 767px) {
             .container-fluid {
@@ -112,7 +124,7 @@ function loadHeader() {
             <!-- Logo -->
             <div id="logo">
                 <a href="../pages/index.html">
-                    <img src="../images/logo_azul_final.svg" alt="Logo" height="75">
+                    <img src="../images/logo_branca_final.svg" alt="Logo" height="75">
                 </a>
                 <!-- Botão do Menu (Hamburger) -->
                 <button class="navbar-toggler d-md-none ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -129,7 +141,7 @@ function loadHeader() {
                         <div class="d-flex align-items-center justify-content-center input-group">
                             <input type="text" id="pesquisa" class="form-control" placeholder="Buscar">
                             <button class="btn btn-outline-primary" type="submit">
-                                <i class="fas fa-search"></i>
+                                <i class="fas fa-search lupa"></i>
                             </button>
                             <a class="nav-link nav-link-loja px-3" href="../pages/Catalogo.html">LOJA</a>
                         </div>
@@ -217,7 +229,7 @@ function loadFooter() {
             color: var(--cor-footer-items-color);
         }
         .footer-links a { /* Links lado Direito */
-            color: #00AFEF;
+            color: var(--cor-footer-items-color);
             text-decoration: none;
             margin: 5px 0;
             display: block;
@@ -261,7 +273,7 @@ function loadFooter() {
         <div class="footer-content container d-flex">
             <!-- Lado Esquerdo: Logo e Copyright -->
             <div class="logo"><!-- O logo é o nome da classe -->
-                <img src="../images/logo_azul_final.svg" alt="Logo">
+                <img src="../images/logo_branca_final.svg" alt="Logo">
                 <p class="copyright">&copy; Peregrinus 2024. Todos os direitos reservados.</p>
             </div>
 

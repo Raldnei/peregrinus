@@ -13,96 +13,113 @@
     <title>Cadastro</title>
 </head>
 <body>
-     <main class="principal d-flex flex-column align-items-center text-center ">
+    <form id="cadastroForm" class="principal d-flex flex-column align-items-center text-center">
         <div class="container">
             <section id="titulo">
                 <h1 class="t1 titulo-grande">Cadastro</h1>
             </section>
             <section id="principal" class="my-4">
-                <form>
-                    <fieldset class="cad">
-                        <div class="row mb-3">
-                            <div class="col-12 col-md-6">
-                                <label class="form-label titulo-edit">Nome:</label>
-                                <input type="text" class="form-control" name="nome" id="nome">
-                            </div>
-                            <div class="col-12 col-md-6">
-                                <label class="form-label titulo-edit">CPF:</label>
-                                <input type="text" class="form-control" name="cpf" id="cpf">
-                            </div>
-                        </div>
-                        
-                        <div class="mb-3">
+                <fieldset class="cad">
+                    <div class="row mb-3">
+                        <!-- Coluna para o campo de Login -->
+                        <div class="col-12 col-md-6">
                             <label class="form-label titulo-edit">Email:</label>
-                            <input type="email" class="form-control" name="email" id="email">
+                            <input type="email" class="form-control" name="email" id="email" required>
                         </div>
-                    </fieldset>
-                </form>
-                <div><h2 class="t2 my-4 titulo-grande">Endereço</h2></div>
-                <form>
-                    <fieldset class="cad">
-                        <div class="mb-3">
-                            <label class="form-label titulo-edit">Logradouro:</label>
-                            <input type="text" class="form-control" name="logradouro" id="logradouro">
+                       
+                        <!-- Coluna para o campo de Senha -->
+                        <div class="col-12 col-md-6">
+                            <label class="form-label titulo-edit">Senha:</label>
+                            <input type="password" class="form-control" name="senha" id="senha" required>
                         </div>
-    
-                        <div class="row mb-3">
-                            <div class="col-12 col-md-4">
-                                <label class="form-label titulo-edit">Número:</label>
-                                <input type="number" class="form-control" name="numero" id="numero">
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label class="form-label titulo-edit">Bairro:</label>
-                                <input type="text" class="form-control" name="bairro" id="bairro">
-                            </div>
-                            <div class="col-12 col-md-4">
-                                <label class="form-label titulo-edit">Cidade:</label>
-                                <input type="text" class="form-control" name="cidade" id="cidade">
-                            </div>
+                    </div>
+                    
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label titulo-edit">Nome:</label>
+                            <input type="text" class="form-control" name="nome" id="nome" required>
                         </div>
-    
-                        <div class="mb-3">
-                            <label class="form-label titulo-edit">Complemento:</label>
-                            <input type="text" class="form-control" name="complemento" id="complemento">
+                        <div class="col-12 col-md-6">
+                            <label class="form-label">CPF:</label>
+                            <input type="text" class="form-control" name="cpf" id="cpf" maxlength="11" required>
                         </div>
-                    </fieldset>
-                </form>
-                <div><h2 class="t2 my-4 titulo-grande">Dados do Cartão</h2></div>
-                <form>
-                    <fieldset class="cad">
-                        <div class="mb-3">
-                            <label class="form-label titulo-edit">Número do Cartão:</label>
-                            <input type="text" class="form-control" name="numero_cartao" id="numero_cartao">
+                    </div>
+                    
+                    
+
+                    <h2 class="t2 my-4 titulo-grande">Endereço</h2>
+                    
+                    <div class="mb-3">
+                        <label class="form-label titulo-edit">Logradouro:</label>
+                        <input type="text" class="form-control" name="logradouro" id="logradouro" required>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="col-12 col-md-4">
+                            <label class="form-label titulo-edit">Número:</label>
+                            <input type="number" class="form-control" name="numero" id="numero" required>
                         </div>
-    
-                        <div class="row mb-3">
-                            <div class="col-12 col-md-6">
-                                <label class="form-label titulo-edit">Validade:</label>
-                                <input type="text" class="form-control" name="validade" id="validade">
-                            </div>
-                            
-                            <div class="col-12 col-md-6">
-                                <label class="form-label titulo-edit">Titular do cartão:</label>
-                                <input type="text" class="form-control" name="titular" id="titular">
-                            </div>
+                        <div class="col-12 col-md-4">
+                            <label class="form-label titulo-edit">Bairro:</label>
+                            <input type="text" class="form-control" name="bairro" id="bairro" required>
                         </div>
-    
-                        <div class="col-6 col-md-2">
-                            <label class="form-label titulo-edit">Security Code:</label>
-                            <input type="number" class="form-control" name="code" id="code">
+                        <div class="col-12 col-md-4">
+                            <label class="form-label titulo-edit">Cidade:</label>
+                            <input type="text" class="form-control" name="cidade" id="cidade" required>
                         </div>
-                    </fieldset>
-                </form>
-            </section>
-            <section id="final1">
-                
-                <a id="botao" class="btn btn-primary titulo-grande" href="../pages/index.html/" role="button">Salvar</a>
-                <a class="botao2 btn btn-danger ms-2 titulo-grande" href="#" role="button">Excluir conta</a>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label titulo-edit">Complemento:</label>
+                        <input type="text" class="form-control" name="complemento" id="complemento">
+                    </div>
+
+                    <section id="final1" class="my-4">
+                        <button type="submit" id="botao" class="btn btn-primary titulo-grande">Salvar</button>
+                        <a class="botao2 btn btn-danger ms-2 titulo-grande" href="#" role="button">Excluir conta</a>
+                    </section>
+                </fieldset>
             </section>
         </div>
-    </main>
-    <!--<script src="scriptcad.js"></script> -->
+    </form>
+
     <script src="../scripts/headerFooter.js"></script>
-    
+    <script>
+        document.getElementById('cadastroForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Impede o comportamento padrão do formulário
+
+            const formData = new FormData(this);
+
+            const usuario = {
+                login: formData.get('email'),
+                senha: formData.get('senha'),
+                nome: formData.get('nome'),
+                cpf: formData.get('cpf'),
+                email: formData.get('email'),
+                logradouro: formData.get('logradouro'),
+                numero: parseInt(formData.get('numero')),
+                bairro: formData.get('bairro'),
+                cidade: formData.get('cidade'),
+                complemento: formData.get('complemento')
+            };
+
+            fetch('http://127.0.0.1:3307/usuario', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(usuario)
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('cadastroForm').reset();
+                alert('Cadastro realizado com sucesso!');
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Erro ao cadastrar usuário.');
+            });
+        });
+    </script>
 </body>
 </html>

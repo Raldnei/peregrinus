@@ -48,11 +48,12 @@
 
   <section id="produtos">
     <div class="container ">
-      <div class="d-flex justify-content-center p-3">
+      <!-- <div class="d-flex justify-content-center p-3">
         <button type="button" class="btn btn-primary m-2">Novidades</button>
         <button type="button" class="btn btn-primary m-2">Mais Vendidos</button>
         <button type="button" class="btn btn-primary m-2">Promoções</button>
-      </div>
+      </div> -->
+      <h1 class="text-center" >Destaques</h1>
     </div>
     
     <div class="row justify-content-center bloco-dos-produtos m-0 p-0 ">
@@ -106,48 +107,44 @@
           <header><h3>nomeProduto</h3></header>
           <p>Preço R$ 25,00</p></a>
       </article>
-        
+      
+      <div id="produtos-lista" class="row justify-content-center bloco-dos-produtos m-0 p-0">   
+        </div>
         
       
-        <section id="produtos">
-          <div class="container">
-              <div class="d-flex justify-content-center p-3">
-                  <button type="button" class="btn btn-primary m-2">Novidades</button>
-                  <button type="button" class="btn btn-primary m-2">Mais Vendidos</button>
-                  <button type="button" class="btn btn-primary m-2">Promoções</button>
-              </div>
-          </div>
-          <div id="produtos-lista" class="row justify-content-center bloco-dos-produtos m-0 p-0">
-               Produtos serão inseridos aqui pelo JavaScript
-          </div>
-        </section>
+       
         <script>
           function carregarProdutos() {
-              fetch('http://127.0.0.1:3307/produto')
-                  .then(response => response.json())
-                  .then(produtos => {
-                      const listaProdutos = document.getElementById('produtos-lista');
-                      listaProdutos.innerHTML = ''; 
+    fetch('http://127.0.0.1:3307/produto')
+        .then(response => response.json())
+        .then(produtos => {
+            const listaProdutos = document.getElementById('produtos-lista');
+            listaProdutos.innerHTML = ''; 
+            
+            const maxProdutos = 10;
+            
+           
+            const produtosLimitados = produtos.slice(0, maxProdutos);
 
-                      produtos.forEach(produto => {
-                          const produtoDiv = document.createElement('article');
-                          produtoDiv.className = 'produto col-lg-2 col-md-2 col-3 p-1 m-1';
-                          produtoDiv.innerHTML = `
-                              <a href="../pages/produto.html">
-                                  <img src="../images/background-dragons.svg" alt="IMAGEM" class="img-fluid">
-                                  <header><h3>${produto.nome}</h3></header>
-                                  <p>Preço R$ ${produto.valor.toFixed(2)}</p>
-                              </a>
-                          `;
-                          listaProdutos.appendChild(produtoDiv);
-                      });
-                  })
-                  .catch(error => {
-                      console.error('Erro ao carregar produtos:', error);
-                  });
-          }
+            produtosLimitados.forEach(produto => {
+                const produtoDiv = document.createElement('article');
+                produtoDiv.className = 'produto col-lg-2 col-md-2 col-3 p-1 m-1';
+                produtoDiv.innerHTML = `
+                    <a href="../pages/produto.html">
+                        <img src="../images/default.jpg" alt="IMAGEM" class="img-fluid">
+                        <header><h3>${produto.nome}</h3></header>
+                        <p>Preço R$ ${produto.valor.toFixed(2)}</p>
+                    </a>
+                `;
+                listaProdutos.appendChild(produtoDiv);
+            });
+        })
+        .catch(error => {
+            console.error('Erro ao carregar produtos:', error);
+        });
+}
 
-          document.addEventListener('DOMContentLoaded', carregarProdutos);
+document.addEventListener('DOMContentLoaded', carregarProdutos);
     </script>
     </div>
 </section>
@@ -187,7 +184,7 @@
         <div id="assinar" class="w-50">
             <form action="assinar.py" method="post" class="d-flex flex-column flex-md-row">
                 <input type="email" placeholder="Insira um email válido" class="form-control mb-2 mb-md-0 me-md-2" required/>
-                <input type="submit" value="Enviar" class="btn btn-outline-primary"/>
+                <input type="submit" value="Enviar" class="btn btn-outline-primary btn-custom"/>
             </form>
         </div>
     </section><!-- #newsletter -->
