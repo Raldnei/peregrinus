@@ -34,11 +34,11 @@ class ComprasControle {
     // Criar uma nova compra
     criar(compra) {
         const sql = `
-            INSERT INTO Compras (valor_total, quant_itens, data_venda, forma_pagamento, id_envio, id_usuario, id_pagamento)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
+            INSERT INTO Compras (valor_total, quant_itens, data_venda, forma_pagamento, id_envio, id_usuario, id_pagamento, id_produto)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?)
         `;
         return new Promise((resolve, reject) => {
-            db.query(sql, [compra.valor_total, compra.quant_itens, compra.data_venda, compra.forma_pagamento, compra.id_envio, compra.id_usuario, compra.id_pagamento], (error, resposta) => {
+            db.query(sql, [compra.valor_total, compra.quant_itens, compra.data_venda, compra.forma_pagamento, compra.id_envio, compra.id_usuario, compra.id_pagamento, compra.id_produto], (error, resposta) => {
                 if (error) {
                     console.log("Problema ao criar nova compra");
                     return reject(error);
@@ -53,11 +53,11 @@ class ComprasControle {
     alterar(valor_total, quant_itens, data_venda, forma_pagamento, id_envio, id_usuario, id_pagamento, id) {
         const sql = `
             UPDATE Compras
-            SET valor_total = ?, quant_itens = ?, data_venda = ?, forma_pagamento = ?, id_envio = ?, id_usuario = ?, id_pagamento = ?
+            SET valor_total = ?, quant_itens = ?, data_venda = ?, forma_pagamento = ?, id_envio = ?, id_usuario = ?, id_pagamento = ?, id_produto = ?
             WHERE id = ?
         `;
         return new Promise((resolve, reject) => {
-            db.query(sql, [valor_total, quant_itens, data_venda, forma_pagamento, id_envio, id_usuario, id_pagamento, id], (error, resposta) => {
+            db.query(sql, [valor_total, quant_itens, data_venda, forma_pagamento, id_envio, id_usuario, id_pagamento, id_produto, id], (error, resposta) => {
                 if (error) {
                     console.log("Problema ao atualizar a compra");
                     return reject(error);

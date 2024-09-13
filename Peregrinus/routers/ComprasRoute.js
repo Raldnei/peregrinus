@@ -37,6 +37,7 @@ routerCompras.put("/compras/:id", (req, res) => {
         compra.id_envio,
         compra.id_usuario,
         compra.id_pagamento,
+        compra.id_produto,
         id
     );
     resposta.then(compra => res.status(200).json(compra))

@@ -187,7 +187,7 @@ class Tabelas{
     }
 
     criarTabelaCompras() {
-        const sql = "CREATE TABLE IF NOT EXISTS Compras (id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,valor_total FLOAT NOT NULL,quant_itens INTEGER NOT NULL,data_venda DATE NOT NULL,forma_pagamento VARCHAR(40) NOT NULL,id_envio INTEGER NOT NULL,id_usuario INTEGER NOT NULL,id_pagamento INTEGER NOT NULL,FOREIGN KEY (id_envio) REFERENCES Envio(id),FOREIGN KEY (id_usuario) REFERENCES Usuario(id),FOREIGN KEY (id_pagamento) REFERENCES Pagamento(id));";
+        const sql = "CREATE TABLE IF NOT EXISTS Compras (id INTEGER AUTO_INCREMENT PRIMARY KEY NOT NULL,valor_total FLOAT NOT NULL,quant_itens INTEGER NOT NULL,data_venda DATE NOT NULL,forma_pagamento VARCHAR(40) NOT NULL,id_envio INTEGER NOT NULL,id_usuario INTEGER NOT NULL,id_pagamento INTEGER NOT NULL, id_produto INTEGER NOT NULL, FOREIGN KEY (id_envio) REFERENCES Envio(id),FOREIGN KEY (id_usuario) REFERENCES Usuario(id),FOREIGN KEY (id_pagamento) REFERENCES Pagamento(id), FOREIGN KEY (id_produto) REFERENCES Produto(id));";
 
         this.conexao.query(sql, (error) => {
             if (error) {
