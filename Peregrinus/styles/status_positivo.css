@@ -7,7 +7,7 @@ body::before { /* Padrão Body */
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../images/background-dragons.svg);
+    background-color: var(--cor-background-color);
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat; 
@@ -16,8 +16,8 @@ body::before { /* Padrão Body */
 }
 
 .principal {
-    min-height: 100vh; /* Garante que o main ocupe toda a altura da viewport */
     display: flex;
+    min-height: 100%;
     flex-direction: column;
     justify-content: center;
     
