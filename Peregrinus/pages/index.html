@@ -131,7 +131,8 @@
                 produtoDiv.className = 'produto col-lg-2 col-md-2 col-3 p-1 m-1';
                 produtoDiv.innerHTML = `
                     <a href="../pages/produto.html">
-                        <img src="../images/default.jpg" alt="IMAGEM" class="img-fluid">
+                       <img src="${produto.foto}" alt="${produto.nome}" class='img-fluid imagem-bd'>
+                      
                         <header><h3>${produto.nome}</h3></header>
                         <p>Preço R$ ${produto.valor.toFixed(2)}</p>
                     </a>

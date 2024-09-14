@@ -25,6 +25,10 @@
                         <section id="titulo">
                             <h1 class="t1 titulo-grande mb-3">Cadastro de Produto</h1>
                         </section>
+                        <div class="col-12">
+                            <label for="foto">Foto (URL):</label>
+                            <input type="text" id="foto" name="foto" required>
+                        </div>
                         <div class="row mb-3">
                             <div class="col-12">
                                 <label class="form-label titulo-edit">Nome do Produto:</label>
@@ -95,10 +99,11 @@
             // Preparar o produto com os valores
             const produto = {
                 nome: formData.get('nome'),
+                foto: formData.get('foto'),
                 descricao: formData.get('descricao'),
                 valor: parseFloat(formData.get('valor')),
                 id_adm: 1, // Valor padrão para id_adm
-                foto: formData.get('foto') ? formData.get('foto').name : 'default.jpg', // Valor padrão se não houver foto
+                 // Valor padrão se não houver foto
                 fantasia: categoria === 'fantasia' ? 'escolheu fantasia' : '0',
                 material: categoria === 'material' ? 'escolheu material' : '0',
                 arma: categoria === 'arma' ? categoriaValue : '0',

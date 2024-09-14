@@ -91,6 +91,7 @@ function loadHeader() {
             }
             .nav-link-loja {
                 display: none;
+                color: #ffffff;
             }
             .navbar-nav {
                 flex-direction: column;

@@ -61,7 +61,7 @@
     document.addEventListener("DOMContentLoaded", function() {
         const form = document.getElementById('filtro-form');
 
-        // Função para carregar produtos
+     
         function carregarProdutos(params = '') {
             fetch(`http://127.0.0.1:3307/produto?${params}`)
                 .then(response => {
@@ -75,7 +75,6 @@
                         throw new Error('Expected an array of products');
                     }
 
-                    // Atualiza o DOM com os produtos retornados
                     
                     const produtosContainer = document.querySelector('#produtos .bloco-dos-produtos');
                     produtosContainer.innerHTML = '';
@@ -85,12 +84,13 @@
                         produtoElement.classList.add('produto', 'col-lg-2', 'col-md-2', 'col-3', 'p-1', 'm-1');
                         produtoElement.innerHTML = `
                             <a href="../pages/produto.html?id=${produto.id}">
-                                <img src="../images/default.jpg" alt="IMAGEM" class="img-fluid">
+                                <img src="${produto.foto}" alt="${produto.nome}" class="imagens-produtos">
+                               
                                 <header><h3>${produto.nome}</h3></header>
                                 <p>Preço R$ ${produto.valor.toFixed(2)}</p>
  
                             </a>
-                        `; // <img src="${produto.foto}" alt="${produto.nome}">
+                        `; // <img src="${produto.foto}" alt="${produto.nome}">   <img src="../images/default.jpg" alt="IMAGEM" class="img-fluid">
                         produtosContainer.appendChild(produtoElement);
                     });
                 })
@@ -99,18 +99,17 @@
                 });
         }
 
-        // Carregar produtos automaticamente quando a página carrega
         carregarProdutos();
 
-        // Evento de submissão do formulário de filtro
+      
         form.addEventListener('submit', function(event) {
             event.preventDefault(); // Impede o envio do formulário
 
-            // Captura os valores dos filtros
+           
             const pesquisa = document.getElementById('pesquisa').value;
             const opcao = document.getElementById('opcao').value;
 
-            // Captura os valores dos checkboxes
+      
             const materiais = Array.from(document.querySelectorAll('fieldset#materiais input[type="checkbox"]:checked'))
                 .map(cb => cb.value);
 
